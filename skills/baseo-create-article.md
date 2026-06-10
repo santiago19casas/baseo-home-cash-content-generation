@@ -130,7 +130,7 @@ Save all completed outputs; report which stage failed and why (verbatim from the
 | 1 | brief-enrich | ✅ / ❌ STOP / ⏭ skipped | `brief.md` | [Active/Tangential — flag count] |
 | 2 | research | ✅ / ⚠️ degraded / ❌ / ⏭ | `research-dossier.md` | [N searches, corpus N rows] |
 | 3 | outline | ✅ / ❌ / ⏭ | `outline.md` | [preflight: all ✅ or N ⚠️] |
-| 4 | draft | ✅ / ❌ / ⏭ | `draft.md` | [NN words, N PROCESS placeholders] |
+| 4 | draft | ✅ / ❌ / ⏭ | `draft.md` | [NN words, N SCREENSHOT placeholders] |
 | 5 | self-check | ✅ / ❌ / ⏭ | `polished-article.md` + `self-check-report.md` | [verdict] |
 
 ## Final verdict
@@ -154,8 +154,8 @@ Save all completed outputs; report which stage failed and why (verbatim from the
 
 ## Notes for the writer
 
-- [`[PROCESS: ...]` placeholders to verify with Eddie/delivery before publishing]
 - [`[SCREENSHOT: ...]` placeholders to capture before publishing]
+- [Any proprietary how-detail the self-check flagged for trimming]
 - [Degradations, brief flags carried forward, etc.]
 ```
 
@@ -194,5 +194,5 @@ Skipped stages are marked `⏭ skipped (provided)`.
 - Evaluate the final article → `baseo-content-review`.
 - Audit on-page → `baseo-onpage-audit`.
 - Produce the .docx deliverable → `baseo-finalize`.
-- Capture screenshots, fill `[PROCESS]` placeholders, or verify delivery accuracy — human responsibilities.
+- Capture screenshots — human responsibility before publishing.
 - Run on incomplete inputs: missing topic, cluster, or heading structure → STOP at Stage 1 with a clear message.

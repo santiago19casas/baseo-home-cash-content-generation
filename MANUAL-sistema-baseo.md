@@ -21,7 +21,7 @@ Un pipeline editorial completo construido sobre 12 skills de Claude que automati
 - **Garantías prohibidas**: el sistema bloquea cualquier promesa de rankings/leads/plazos. Proof = resultados pasados; promesa = prohibido. (Es la posición pública de la marca.)
 - **Pricing disclosure**: nadie publica precios ni nombres de paquetes (Foundation/Growth/Domination) en editorial.
 - **Audiencia equivocada**: gate automático contra contenido dirigido a sellers (eso es contenido de sitios de clientes, no del blog BASEO).
-- **Delivery accuracy**: cuando el artículo describe cómo BASEO entrega un servicio, usa `baseo-services-reference.md` o inserta placeholders `[PROCESS: ...]` para verificación humana.
+- **"Name it, prove the why, skip the how"**: el blog explica QUÉ hace BASEO y POR QUÉ funciona (eso educa y demuestra expertise), y dice QUE lo hacemos — pero NO revela el cómo propietario (herramientas/vendors, conteos exactos por mes, workflow interno, metodología). Mencionar que lo hacemos basta; el lector asume que así debe hacerse. `baseo-services-reference.md` define qué es seguro afirmar de cada servicio. El detalle operativo del cómo nunca se publica: si una frase parece necesitarlo, el drafter la reformula al nivel QUÉ/POR QUÉ. No hay placeholders de proceso.
 
 ### Quiénes lo usan
 
@@ -30,7 +30,7 @@ Un pipeline editorial completo construido sobre 12 skills de Claude que automati
 | **Editor (Eddie)** | Topic + keywords al escritor. Mantiene `baseo-context.md` y `baseo-services-reference.md`. | Ninguna directa; configura el sistema. |
 | **Escritor** | Produce el heading structure. Corre la pipeline. Verifica placeholders. | `baseo-create-article` (orquestador) o las 5 sub-skills. |
 | **Reviewer** | Revisa el draft post-self-check. Aprueba / devuelve. | `baseo-content-review`, `baseo-onpage-audit`. |
-| **Publisher** | Visuales, verificación de `[PROCESS]` con Eddie, Drive, publica. | `baseo-finalize`. |
+| **Publisher** | Visuales (screenshots), Drive, publica. | `baseo-finalize`. |
 
 ### El flujo en una imagen
 
@@ -49,7 +49,7 @@ Reviewer corre content-review + onpage-audit
    ↓
 APROBADO → baseo-finalize
    ↓
-.docx en Drive → visuales + verificación PROCESS → publicar
+.docx en Drive → visuales → publicar
 ```
 
 ---
@@ -61,8 +61,8 @@ APROBADO → baseo-finalize
 | Skill | Función |
 |---|---|
 | `baseo-context.md` | Single source of truth: personas B1–B5, anti-personas (¡sellers!), catálogo de servicios + out-of-scope, Approved claims library, pricing disclosure policy, pain → service map, Tangential rules, funnel stages, banned clichés + agency-speak + trust-killers, URLs canónicas, ICP vocabulary |
-| `baseo-style-guide.md` | Voz operator-to-operator, deal-math sentences, translation gap (investor language), intros, H2/H3 rules, service integration (mostrar el playbook), internal linking, visual cadence, closes |
-| `baseo-services-reference.md` | Cheat sheet de delivery por servicio: deliverables documentados, timelines, qué puede afirmar el writer, qué requiere placeholder `[PROCESS: ...]`. Equivalente del ui-reference de Schemafy. |
+| `baseo-style-guide.md` | Voz operator-to-operator, deal-math sentences, translation gap (investor language), intros, H2/H3 rules, service integration (regla "name it, prove the why, skip the how"), internal linking, visual cadence, closes |
+| `baseo-services-reference.md` | Cheat sheet de delivery por servicio: qué es SEGURO afirmar (WHAT/WHY) y qué se OMITE por política (tools, conteos, workflow). Equivalente del ui-reference de Schemafy. |
 
 **Phase 2 — Review:**
 
@@ -78,7 +78,7 @@ APROBADO → baseo-finalize
 | `baseo-brief-enrich.md` | Cluster + headings → brief enriquecido con persona, funnel, pain→service, CTA (audit), snippet target, SEO metadata, density targets, framing Active/Tangential. Gate de audiencia (sellers → STOP) |
 | `baseo-research.md` | Brief → dossier con SERP analysis, fuentes tier-clasificadas (Google/Carrot/ATTOM...), claims first-party desde la library + stats externos con source verificada, internal link candidates, capability hooks. WebSearch + web_fetch (3–6 calls) |
 | `baseo-outline.md` | Brief + dossier → outline paragraph-level con data placement, link placement, snippet structure, word counts, compliance preflight |
-| `baseo-draft.md` | Outline → prose. Aplica style guide. Usa services-reference para procesos reales o inserta `[PROCESS: ...]`. Inserta `[SCREENSHOT: ...]` |
+| `baseo-draft.md` | Outline → prose. Aplica style guide. Describe servicios a nivel QUÉ/POR QUÉ (nunca el cómo propietario). Inserta `[SCREENSHOT: ...]` |
 | `baseo-self-check.md` | Draft → auto-fix de clichés/agency-speak/price disclosures/em-dashes + flags (claims, garantías, fabricación, audiencia). Verdict: Ready for review / Needs writer attention |
 | `baseo-create-article.md` | **Orquestador**. Corre las 5 en secuencia, guarda outputs por artículo, honora STOPs, soporta resume |
 
@@ -86,7 +86,7 @@ APROBADO → baseo-finalize
 
 | Skill | Función |
 |---|---|
-| `baseo-finalize.md` | Polished article aprobado → `.docx` con metadata header, cajas amarillas (screenshots), cajas naranjas (PROCESS), CTA box. Spot-check final de compliance |
+| `baseo-finalize.md` | Polished article aprobado → `.docx` con metadata header, cajas amarillas (screenshots), CTA box. Spot-check final de compliance |
 
 **El archivo que tu equipo mantiene además de las referencias:**
 
@@ -139,7 +139,7 @@ baseo-home-cash-content-generation/
 1. **Verificar URLs canónicas** en `baseo-context.md` § Canonical URLs: confirmar la URL real del blog (¿`thebaseo.net/blog/`?) y la URL del CTA de audit. Las filas marcadas ⚠️ VERIFY bloquean linking hasta confirmarse.
 2. **Resolver el 28 vs 42**: el sitio usa "3 → 28 leads" en el stats block y "3 to 42" en el case study heading. El sistema está estandarizado en **28** y flagea cualquier "42". Si prefieres 42, edita la Approved claims library en `baseo-context.md`.
 3. **Crear `baseo-corpus.csv`** con los artículos ya publicados (aunque sean pocos — 5-10 filas bastan para validar el internal linking).
-4. **Revisar `baseo-services-reference.md`**: los `[PROCESS: ...]` marcan lo que NO está documentado (tool stack, volúmenes mensuales, formatos de reporte). Cuanto más documentes, menos placeholders genera el drafter. En particular la sección 8 (PPC Management) tiene el process shape vacío — llénala antes de escribir contenido PPC-céntrico.
+4. **Revisar `baseo-services-reference.md`**: las líneas "Off-blog detail (omit)" listan lo que NO va al blog por política (tool stack, volúmenes mensuales, workflow interno). No es que falte documentarlo — es que se omite a propósito. Solo decides hacer público un dato operativo si tú lo apruebas explícitamente. Revisa que el contenido marcado como "documented" (lo que SÍ se puede afirmar) refleje cómo describes tus servicios de cara al cliente.
 
 ### No requiere Ahrefs
 
@@ -194,7 +194,7 @@ Verdict "Needs writer attention" → abrir `self-check-report.md`, resolver los 
 
 En el report, sección **Placeholders inventory**:
 - `[SCREENSHOT: ...]` → visuales que el publisher debe capturar/construir (SERPs, curvas de tráfico, excerpts de reportes).
-- `[PROCESS: ...]` → detalles de delivery que hay que verificar con Eddie antes de publicar.
+(Ya no hay placeholders de proceso: el detalle operativo del cómo nunca se escribe. Si una frase lo pedía, el drafter la reformuló al nivel QUÉ/POR QUÉ.)
 
 ### Paso 6–8 — Review (Reviewer)
 
@@ -210,11 +210,11 @@ Chat nuevo. Adjuntar context + style guide + corpus + las 2 skills de review + e
 
 ### Paso 9 — Finalize (Publisher)
 
-Chat nuevo: "Corre baseo-finalize sobre el polished-article.md aprobado" (adjuntar polished + brief + context). Output: `[slug].docx` con cajas amarillas/naranjas y CTA box. Finalize además hace spot-check de compliance (precios, garantías, CTA URL) y se detiene si algo se coló.
+Chat nuevo: "Corre baseo-finalize sobre el polished-article.md aprobado" (adjuntar polished + brief + context). Output: `[slug].docx` con cajas amarillas (screenshots) y CTA box. Finalize además hace spot-check de compliance (precios, garantías, CTA URL) y se detiene si algo se coló.
 
 ### Paso 10–11 — Drive y publicación (Publisher)
 
-Subir a Drive → reemplazar cajas amarillas con visuales reales → verificar cajas naranjas con Eddie → polish → copiar al CMS → publicar. Mover la carpeta del artículo a `articles-published/`.
+Subir a Drive → reemplazar cajas amarillas con visuales reales → polish → copiar al CMS → publicar. Mover la carpeta del artículo a `articles-published/`.
 
 ---
 
@@ -227,7 +227,7 @@ Para quien ya conoce el sistema Schemafy, esto es lo que cambió:
 | Feature catalog (plugin) | Service catalog + Out-of-scope services | El "producto" es la agencia; el riesgo es prometer servicios que no vendemos |
 | Future features (roadmap) | Out-of-scope services | No hay roadmap de features; hay servicios que NO vendemos pero sí enseñamos (tangential) |
 | Tier/price disclosure policy | Package/price disclosure policy + ban de garantías | Mismo mecanismo; se añade la prohibición de promesas de rankings/leads (trust-killer #1 con este ICP) |
-| `schemafy-ui-reference.md` | `baseo-services-reference.md` | No hay UI; hay procesos de delivery. `[WORKFLOW:]` → `[PROCESS: ...]` |
+| `schemafy-ui-reference.md` | `baseo-services-reference.md` | No hay UI; hay servicios. Define qué es seguro afirmar (QUÉ/POR QUÉ) y qué se omite del blog (el cómo propietario). Sin placeholders de proceso |
 | Personas P1–P5 (WordPress operators) | Personas B1–B5 (investors: Burned, PPC-Dependent, Invisible Veteran, Scaling, AEO First-Mover) | Del ICP de cash home buyers |
 | — | **Approved claims library** | Nuevo: los resultados de clientes solo se citan verbatim desde una lista aprobada. El equivalente agency de "no inventar features" |
 | — | **Audience gate (sellers)** | Nuevo: el error fatal específico de esta vertical es escribirle al motivated seller |

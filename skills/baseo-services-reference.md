@@ -4,9 +4,14 @@ Service delivery cheat sheet for BASEO. The agency-world equivalent of a product
 
 Maintained by Eddie / the BASEO delivery team. Read by `baseo-outline` and `baseo-draft`.
 
-Update this file whenever delivery changes: new deliverables, changed timelines, new report sections, new tracking stack. Stale entries lead to hallucinated process descriptions in editorial content — the agency version of fake menu paths.
+**Editorial philosophy: name it, prove the why, skip the how.** This file documents what is SAFE and APPROPRIATE to state in a public blog about each service. The blog explains the WHAT and WHY of an approach (educational, demonstrates expertise) and states THAT BASEO does it. It deliberately does NOT reveal the proprietary HOW: specific tools and vendors, exact monthly deliverable counts, internal QA and approval workflows, or methodology. Mentioning that we do something is enough; readers assume that's what should be done. Detailing how only hands the playbook to competitors and dates the article when our stack changes.
 
-**Rule for writers/skills**: if an article needs a process detail NOT documented here, insert a `[PROCESS: shape description — verify against current BASEO delivery before publishing]` placeholder. Never invent deliverable counts, timelines, tools, or report formats.
+So the items left blank below are NOT "to be documented later for the blog" — they are intentionally kept off the blog. They appear here only so the skills know to omit them.
+
+**Rule for writers/skills**:
+- Write at the WHAT / WHY / that-we-do-it level using the "documented" content in each service below.
+- Never publish proprietary delivery detail (tools, exact counts, internal workflow). If a draft drifts there, cut it or reframe the sentence at the WHAT/WHY level.
+- Never invent delivery specifics, and never leave a placeholder or marker for one. If a point can't be made without operational specifics, the point gets reframed — not flagged for later.
 
 ---
 
@@ -43,7 +48,7 @@ Cross-service facts (safe to state anywhere): month-to-month engagement, 30 days
 
 **Honest-broker behavior** (safe and encouraged to state): if the market doesn't support the math, the audit says so. BASEO has turned down clients whose markets weren't a fit.
 
-**Process shape**: review of site content/structure, tracking setup, GBP, competitor SERPs in the prospect's metro. `[PROCESS: tool stack and exact audit checklist not documented — use placeholder if an article needs that depth]`
+**Off-blog detail (omit)**: the exact audit checklist and tool stack stay off the blog. State that the audit covers the site, competitors, and market and arrives written in ~2 business days; don't itemize the internal process.
 
 **Limitations**: not a full technical crawl report dump; it's a written, prioritized document, not a 90-page PDF of tool exports.
 
@@ -66,7 +71,7 @@ Cross-service facts (safe to state anywhere): month-to-month engagement, 30 days
 
 **End state after month 2** (safe summary): a site Google can read and a dashboard that shows leads, not impressions.
 
-**Process shape**: `[PROCESS: exact tracking stack (which call tracking vendor), QA steps, and GBP rebuild checklist not documented — placeholder required for that depth]`
+**Off-blog detail (omit)**: which call-tracking vendor, the QA steps, and the GBP rebuild checklist stay off the blog. Name the categories (call tracking, form tracking, GA4, Search Console, schema, GBP rebuild) and why they come first; don't name vendors or itemize steps.
 
 **Limitations**: not a site redesign; works on the client's existing platform (most clients stay on Carrot/WordPress — we make it work).
 
@@ -84,7 +89,7 @@ Cross-service facts (safe to state anywhere): month-to-month engagement, 30 days
 - Built per market the client actually buys in; page count follows the client's footprint (a 1-city buyer and a 12-city buyer get different builds).
 - Example scale from the flagship case study: 4 existing city pages rewritten in months 1–2; 18 new city pages built months 2–6.
 
-**Process shape**: `[PROCESS: per-page research inputs, content brief format, and publication cadence per package not documented — placeholder required]`
+**Off-blog detail (omit)**: per-page research inputs, the content brief format, exact page counts, and publication cadence stay off the blog. Explain why pages must be original per market and that BASEO builds them; don't quote a pages-per-month figure.
 
 **Limitations**: page count per month is SOW-defined and varies by engagement; never state a universal "X pages per month" figure in editorial.
 
@@ -100,7 +105,7 @@ Cross-service facts (safe to state anywhere): month-to-month engagement, 30 days
 
 **Documented rationale** (safe to state): these pages convert above-average because the searcher's situation is urgent and specific; they also feed internal links to city pages.
 
-**Process shape**: `[PROCESS: pillar page structure template and supporting cluster post plan not documented — placeholder required]`
+**Off-blog detail (omit)**: the pillar-page structure template and supporting cluster plan stay off the blog. Name the situations and why they convert; don't publish the template.
 
 ---
 
@@ -119,7 +124,7 @@ Cross-service facts (safe to state anywhere): month-to-month engagement, 30 days
 
 **Documented results context** (use Approved claims library in `baseo-context` for specifics): flagship client's pages began being cited by AI Overviews and Perplexity by month 7.
 
-**Process shape**: `[PROCESS: exact tracking tooling and prompt sets used for citation checks not documented — placeholder required]`
+**Off-blog detail (omit)**: the exact citation-tracking tooling and prompt sets stay off the blog. State that BASEO tracks citations weekly across the major engines and recovers AI-mislabeled traffic; don't reveal the tooling.
 
 **Limitations**: no one controls whether an AI cites a page; we optimize the inputs and track the outputs. Never promise citation.
 
@@ -133,7 +138,7 @@ Cross-service facts (safe to state anywhere): month-to-month engagement, 30 days
 
 **Documented approach** (safe to describe): links from local chambers of commerce, REIAs, local news outlets, and relevant local/industry directories. Explicitly NO link farms, no PBNs, no paid link schemes.
 
-**Process shape**: `[PROCESS: outreach method, monthly link targets, and vetting criteria not documented — placeholder required]`
+**Off-blog detail (omit)**: the outreach method, monthly link targets, and vetting criteria stay off the blog. State the kinds of sources (chambers, REIAs, local news) and the no-link-farms stance; don't publish the methodology or volume.
 
 **Limitations**: never state a universal "X links per month" in editorial; volume is SOW-defined.
 
@@ -155,7 +160,7 @@ Cross-service facts (safe to state anywhere): month-to-month engagement, 30 days
 
 **Documented extra**: lead-intent classification — every form submission scored against motivated-seller signals so the client's team calls the highest-intent leads first.
 
-**Process shape**: `[PROCESS: report template/format and scoring criteria not documented — placeholder required]`
+**Off-blog detail (omit)**: the report template/format and exact lead-scoring criteria stay off the blog. State what the report contains (leads with numbers, CPL trend, pages, AI citations, next month's plan) and that leads are scored by intent; don't publish the scoring model or layout.
 
 ---
 
@@ -172,7 +177,7 @@ Cross-service facts (safe to state anywhere): month-to-month engagement, 30 days
 - The public expectation: most clients cut PPC spend 30–50% by months 6–9 as organic does the heavy lifting; some keep a small spend for emergency keywords or new markets. We never tell clients to kill PPC on day one.
 - Same accountability mechanics as the rest of the engagement: written SOW, monthly reporting, month-to-month.
 
-**Process shape**: `[PROCESS: account structure, keyword/negative methodology, landing page approach, bid management cadence, and reporting integration not documented — Eddie: fill this section in or the drafter will use placeholders]`
+**Off-blog detail (omit)**: account structure, keyword/negative methodology, landing-page approach, bid cadence, and reporting integration stay off the blog. State that BASEO runs motivated-seller PPC under the same lead/cost-per-deal lens as organic and shrinks it as organic compounds; don't publish the methodology.
 
 **Limitations**: never quote ad budgets, management fee structures, or specific CPC promises in editorial; market CPC ranges ($25–$120/click) are citable as external stats with a source.
 
@@ -194,11 +199,14 @@ This month-by-month arc is documented via the flagship case study and public pos
 
 ---
 
-## What's NOT documented yet (placeholder required)
+## Deliberately OFF the blog (do not publish — mention-level only)
 
-- Exact tool stack (call tracking vendor, rank tracking, AI citation tooling).
-- Per-package deliverable counts (pages/month, links/month).
+These are NOT gaps waiting to be filled. They are proprietary execution details we keep off public content by policy. The blog can say BASEO does the work and why it matters; it does not reveal:
+
+- Exact tool stack (call-tracking vendor, rank tracking, AI-citation tooling).
+- Per-package or per-month deliverable counts (pages/month, links/month).
 - Internal QA and approval workflows.
-- Report template visuals.
+- Report template visuals and exact report layout.
+- Link-outreach methodology and source-vetting criteria.
 
-When an article needs any of these, the drafter inserts `[PROCESS: ...]` and the publisher verifies with Eddie before publishing.
+If an article seems to need one of these to make its point, that's a signal to reframe at the WHAT/WHY level instead. The detail is simply omitted, always. The only delivery-level thing that IS public is the generic timeline arc below (months 1–2 foundation, etc.), which is positioning, not proprietary method.

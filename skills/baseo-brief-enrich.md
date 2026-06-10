@@ -288,7 +288,7 @@ For **Tangential** briefs:
 
 - **For `baseo-research`**: [specific stats to source, competitor pages to check, corpus URLs likely relevant]
 - **For `baseo-outline`**: [structural recommendations — e.g., "deal-math table under H2 #2, before the playbook"]
-- **For `baseo-draft`**: [persona voice dial, mandatory framings, which claims library entries to use; if a delivery process is needed, note whether `baseo-services-reference` documents it or the drafter should insert a `[PROCESS: ...]` placeholder]
+- **For `baseo-draft`**: [persona voice dial, mandatory framings, which claims library entries to use; service mentions stay at the WHAT/WHY level from `baseo-services-reference` — never proprietary how-detail]
 
 ## Flags
 
@@ -305,7 +305,7 @@ For **Tangential** briefs:
 - **Never plan guarantee language.** Proof = past results from the Approved claims library; promises are banned.
 - **Default to B1 or B2 when persona is ambiguous.** Document the ambiguity in Flags.
 - **Don't write prose for the reader yet.** The brief is a structured handoff.
-- **Don't propose specific delivery details.** That's the drafter's job using `baseo-services-reference`. If a process moment is needed, note "drafter to describe [service] process or insert placeholder."
+- **Don't propose specific delivery details.** Service mentions live at the WHAT/WHY/that-we-do-it level (`baseo-services-reference`). Proprietary how-detail (tools, counts, internal workflow) never goes on the blog, so the brief never asks for it.
 
 ---
 

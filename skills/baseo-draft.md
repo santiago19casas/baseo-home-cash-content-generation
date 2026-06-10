@@ -4,7 +4,7 @@
 
 Step 4 of the BASEO content creation pipeline. Takes the detailed outline from `baseo-outline` and produces actual article prose. This is the skill where writing happens — every previous skill was planning. The drafter executes the plan, doesn't improvise.
 
-The goal: a draft that passes `baseo-self-check` and `baseo-content-review` with minimal edits. Every paragraph traces to an outline bullet. Every claim has a source (or is verbatim from the Approved claims library). Every BASEO process description either uses `baseo-services-reference` or marks an explicit `[PROCESS: ...]` placeholder. Voice matches `baseo-style-guide` rigorously — operator-to-operator, deal math, zero agency-speak.
+The goal: a draft that passes `baseo-self-check` and `baseo-content-review` with minimal edits. Every paragraph traces to an outline bullet. Every claim has a source (or is verbatim from the Approved claims library). Every BASEO service description stays at the WHAT/WHY/that-we-do-it level from `baseo-services-reference` and never reveals proprietary how-detail. Voice matches `baseo-style-guide` rigorously — operator-to-operator, deal math, zero agency-speak.
 
 Trigger phrases: "draft this article," "write the draft from the outline," "generate the article," plus Spanish equivalents ("escribe el draft," "redacta el artículo desde el outline").
 
@@ -15,7 +15,7 @@ Trigger phrases: "draft this article," "write the draft from the outline," "gene
 - The **detailed outline** from `baseo-outline` (mandatory). Must have passed compliance preflight with no ❌ — if not, STOP and send back to outline.
 - `baseo-context` — for canonical URLs, banned clichés + agency-speak + trust-killers, pricing disclosure policy (NEVER disclose), Approved claims library, Tangential rules.
 - `baseo-style-guide` — voice rules 1–9, persona dials, intro patterns, H2/H3 rules, paragraph rhythm, deal-math sentences, service integration, internal linking, visual cadence, closes.
-- `baseo-services-reference.md` — for accurate process descriptions. Documented → use real steps. Not documented → `[PROCESS: ...]` placeholder.
+- `baseo-services-reference.md` — for the WHAT/WHY level that's safe to state about each service, plus the "Off-blog detail (omit)" line per service marking what never gets published.
 
 If any of these reference files is missing, STOP and flag — drafting requires all four.
 
@@ -30,7 +30,7 @@ A complete article draft in markdown, ready for `baseo-self-check`:
 - All body sections with prose written from outline sub-bullets.
 - Data citations placed exactly where the outline specified — first-party claims cited as BASEO client data, external stats with source links.
 - Internal links with planned anchor text; external Tier 1/2 links.
-- BASEO process descriptions (services-reference or `[PROCESS: ...]` placeholders).
+- BASEO service descriptions at the WHAT/WHY/that-we-do-it level (never proprietary how-detail).
 - BASEO contextual mentions (1–3 for Tangential briefs).
 - Featured snippet element built exactly per outline.
 - Image placeholders with descriptive captions; lists and tables per plan.
@@ -77,20 +77,22 @@ After the intro, insert a TOC (bulleted H2 anchor list) only if the word count t
 
 **3f. BASEO reference** — the most error-prone step. Two paths:
 
-**For Active briefs**, sections may need a BASEO process description or service mention:
+**For Active briefs**, sections explain a service at the WHAT/WHY/that-we-do-it level:
 
-- If the outline specifies a process AND `baseo-services-reference` documents it: write the real steps, timeline, and deliverables from the reference. Show the playbook openly (transparency is the strategy — see `baseo-style-guide` § Service integration).
-- If the outline specifies a process the reference does NOT document at that depth: insert `[PROCESS: shape description — verify against current BASEO delivery before publishing]`. Describe the SHAPE, never invent deliverable counts, tools, or timelines.
+- Write at the WHAT / WHY / that-we-do-it level (see `baseo-style-guide` § Service integration). Explain the approach and why it works, and state that BASEO does it, using only the "documented" content in `baseo-services-reference`. NEVER publish proprietary how-detail (specific tools/vendors, exact monthly counts, internal QA workflow, methodology) even if you could infer it — that detail is permanently off the blog.
+- If a section seems to need proprietary delivery detail to make its point, reframe the sentence at the WHAT/WHY level. There is no placeholder and no exception: never invent counts, tools, or timelines, and never leave a marker for them.
 
-**Example with services-reference available** (Diagnostic Audit is documented):
+**Example** (WHAT + WHY + that-we-do-it, Diagnostic Audit):
 
 > Here's what happens in week 1, before any monthly fee. You send the domain. Within about 2 business days you get a written audit: the 3 biggest issues holding your site back, the keywords your top local competitor ranks for that you don't, and the deal-math projection for your market. It's yours to keep whether we ever speak or not.
 
-**Example with placeholder** (link outreach method is not documented):
+**Example** (reframing instead of revealing the how):
 
-> The links come from local chambers, REIAs, and news outlets, never from link farms. `[PROCESS: describe outreach method and monthly volume — verify against current BASEO delivery before publishing]`
+> The authority that moves rankings comes from real local links: chambers of commerce, REIAs, local news outlets. Not link farms, not PBNs. That's what BASEO builds for the markets you operate in.
 
-**For Tangential briefs**: total mentions across the article 1–3, all contextual, no process positioning. Frame BASEO as one relevant option, not the method.
+Notice what's NOT there: no monthly link count, no outreach methodology, no vendor. The WHAT (real local links) and WHY (authority that moves rankings, the no-farms stance) carry the section. The how stays off the blog, period. If a sentence felt like it needed the count, the fix is to rewrite the sentence, not to add the count.
+
+**For Tangential briefs**: total mentions across the article 1–3, all contextual, no service positioning. Frame BASEO as one relevant option, not the method.
 
 **Example Tangential mention**:
 
@@ -123,7 +125,7 @@ After the intro, insert a TOC (bulleted H2 anchor list) only if the word count t
 | First-party claims fidelity | Compare every BASEO result claim against the Approved claims library verbatim | Mismatch → fix to verbatim or cut |
 | Em-dashes | Search for — | Any → replace per style guide |
 | BASEO mention count | Count vs framing × funnel | Outside range → flag |
-| `[PROCESS: ...]` placeholders | Count | List in Draft notes |
+| Proprietary how-detail | Search for named tool/vendor in "we use X" context, BASEO-attributed per-month counts ("X pages/month," "X links/month"), itemized internal workflow | Any → cut or reframe to WHAT/WHY |
 | Data points without source | Count unsourced numbers (excluding approved first-party claims) | Should be 0 — fix |
 | Internal links count | Count | Outside target → flag |
 | Featured snippet element present | Confirm designated H2 has it | Missing → STOP and fix |
@@ -183,13 +185,9 @@ Two blocks separated by `---`: clean article body, then the Draft notes appendix
 | Internal links | ✅ N / ⚠️ | [...] |
 | Featured snippet element | ✅ (type) under H2 "[name]" / ❌ | [...] |
 | Image/list/table | ✅ I:N L:N T:N / ⚠️ | [...] |
+| Proprietary how-detail | ✅ none / ❌ cut N | [...] |
 | Total word count | ✅ NNNN / ⚠️ | [...] |
 | Audience (investor-addressed) | ✅ / ❌ | [...] |
-
-## Process placeholders inserted
-
-- `[PROCESS: ...]` — service: [name] — section: H2 "[name]" — services-reference status: not documented
-...
 
 ## Claims and data points cited (for verification)
 
@@ -216,7 +214,7 @@ Draft written in: English | Spanish — matches outline ✅ / ❌
 ## Hard rules
 
 - **Don't deviate from the outline structure.** The drafter writes prose; it does not redesign.
-- **Don't invent data, links, URLs, or delivery specifics.** Every data point traces to the outline. Every process traces to `baseo-services-reference` OR uses a `[PROCESS: ...]` placeholder.
+- **Don't invent data, links, URLs, or delivery specifics.** Every data point traces to the outline. Service descriptions stay at the WHAT/WHY level from `baseo-services-reference`; never publish proprietary how-detail and never leave a placeholder for it.
 - **Don't invent or extend BASEO results.** First-party claims verbatim from the Approved claims library only. No composites, no rounding, no "typically."
 - **Never promise outcomes.** No ranking guarantees, no lead-count promises, no "in 30 days." Expectation language mirrors the public FAQ: first leads month 3–5, real volume month 6–9.
 - **Never disclose packages or prices.** "Foundation/Growth/Domination," "$2,500/$4,500/$7,500," setup fees — banned (single exception: the $4,500 figure inside the approved case-study claim).
@@ -235,5 +233,5 @@ Draft written in: English | Spanish — matches outline ✅ / ❌
 - Run the independent compliance pass → `baseo-self-check`.
 - Evaluate or score → `baseo-content-review` / `baseo-onpage-audit`.
 - Capture real screenshots — `[SCREENSHOT: ...]` placeholders only.
-- Verify BASEO delivery accuracy — that's the human's job (or the `baseo-services-reference` maintainer).
+- Publish proprietary delivery detail (tools, counts, internal workflow) — that stays off the blog permanently; reframe instead.
 - Format the final deliverable → `baseo-finalize`.

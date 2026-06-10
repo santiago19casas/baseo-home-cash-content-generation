@@ -279,7 +279,7 @@ Every article must be tagged TOFU, MOFU, or BOFU. This determines CTA expectatio
 
 ### MOFU — Middle of funnel
 - **What**: how-tos, playbooks, audit checklists, "what your agency should be doing," channel comparisons, build-vs-buy guides.
-- **BASEO mention frequency**: 4–8 mentions. The method described IS how BASEO works — show the playbook openly.
+- **BASEO mention frequency**: 4–8 mentions. The approach described is what BASEO does and why it works — explain the WHAT and WHY, state that BASEO does it, but keep the proprietary HOW (tools, exact counts, internal workflow) off the page (see `baseo-style-guide` § Service integration).
 - **CTA**: direct CTA integrated mid-post + one at end. Both point to the free audit (it's the universal next step; there is no "install" equivalent).
 
 ### BOFU — Bottom of funnel
@@ -341,6 +341,7 @@ Technical terms (schema, GBP, AI Overviews, etc.) are fine WHEN explained in pla
 - "We work with all industries"
 - "Leads in 30 days" (that's PPC or a lie — the FAQ says so publicly)
 - Any 12-month-contract framing or pressure tactic
+- Arrogant expertise claims: "we're the experts," "you're with the wrong team," "you're doing it wrong, hire us," "investors come to us because we're the best." Authority is proven by specialization and results, never asserted. (The consultative expertise close in `baseo-style-guide` § The expertise close is the allowed alternative.)
 
 ### Banned structural patterns
 

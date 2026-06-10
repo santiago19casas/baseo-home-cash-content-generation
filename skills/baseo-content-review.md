@@ -109,7 +109,7 @@ Persona NONE → cap at 3.
 | Framing | Funnel | Expected mentions |
 |---|---|---|
 | Active | TOFU | 2–4, first before halfway |
-| Active | MOFU | 4–8, the playbook IS BASEO's process |
+| Active | MOFU | 4–8, the approach (WHAT + WHY) is what BASEO does |
 | Active | BOFU | Protagonist, nearly every section |
 | Tangential | any | 1–3 total, contextual, soft CTA only |
 
@@ -117,16 +117,15 @@ Outside range → flag (fix, not cap).
 
 **3c. Method vs. mention**
 
-Per `baseo-style-guide` § Service integration: in Active articles, BASEO must appear at least once as a method — concrete steps, real deliverables, the timeline arc — not just name-drops.
+Per `baseo-style-guide` § Service integration: in Active articles, BASEO must appear at least once as the approach (WHAT + WHY + that-we-do-it), not just a hollow name-drop. But the approach is NOT the proprietary how — naming tools, exact counts, or internal workflow is over-disclosure, not a strength.
 
-- ✅ structural pass: shows the playbook ("tracking first, then city pages, then situation pillars, then the AI layer — in that order, because...").
-- ❌ structural fail: every mention is generic ("BASEO can help with SEO").
+- ✅ structural pass: explains the approach and why, and states BASEO does it ("tracking goes in first, then original city pages and situation pillars, then the AI layer, in that order, because situation pages without tracking is how the last agency hid").
+- ❌ structural fail (too little): every mention is generic ("BASEO can help with SEO").
+- ❌ over-disclosure (too much): the article reveals proprietary how — specific tool/vendor names, exact pages-per-month or links-per-month counts, internal QA/approval steps, outreach methodology. Flag it:
 
-Do NOT validate delivery accuracy against actual BASEO operations — Claude doesn't have ground truth beyond `baseo-services-reference`. If the article describes delivery specifics (deliverable counts, tools, timelines) not in the services reference, append:
+> ⚠️ Proprietary delivery detail published (tools / exact counts / internal workflow). Per editorial policy this stays off the blog — recommend trimming to the WHAT/WHY level.
 
-> ⚠️ Delivery detail described — verify against current BASEO delivery before publishing.
-
-Missing method entirely (Active brief) → flag and propose the **shape** needed, without inventing specifics.
+Do NOT validate delivery accuracy against actual BASEO operations — Claude doesn't have ground truth beyond `baseo-services-reference`. Missing approach entirely (Active brief) → flag and propose the WHAT/WHY framing needed, without inventing specifics.
 
 ### Step 4 — Pain → service → CTA alignment
 
@@ -162,6 +161,8 @@ Quote the actual CTA(s) and propose replacements where needed.
 | Tables/lists well-formed | Headers, parallel structure, 3+ items | Malformed |
 | Featured snippet target | Deliberate definition / list / table | None |
 | Sounds-like-the-old-agency test | Read as B1: any sentence that fits a generic agency pitch deck | Quote each |
+| Expertise nudge — tone | Is the "this is how we do it / here's your gap" beat consultative (reader concludes, authority by specialization) or arrogant ("wrong team," "we're the experts," "come to us")? | Arrogant phrasing → flag and quote (trust-killer per `baseo-context`) |
+| Expertise nudge — frequency | Count the self-referential "you should be doing this / that's why you need us" beats | 3+ → flag as over-promotion (cap is 1–2, ideally 1 in the close, per `baseo-style-guide` § Frequency cap) |
 
 Quote each violation with context.
 

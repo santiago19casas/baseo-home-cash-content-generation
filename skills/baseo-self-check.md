@@ -23,7 +23,7 @@ Trigger phrases: "self-check this draft," "pre-review compliance check," "polish
 
 Two outputs separated by `---`:
 
-1. **Polished draft**: article body with safe auto-fixes applied (banned phrases replaced, agency-speak translated, marketing-verb H2s rewritten, price disclosures removed, em-dashes replaced). `[SCREENSHOT: ...]` and `[PROCESS: ...]` placeholders stay untouched.
+1. **Polished draft**: article body with safe auto-fixes applied (banned phrases replaced, agency-speak translated, marketing-verb H2s rewritten, price disclosures removed, em-dashes replaced). `[SCREENSHOT: ...]` placeholders stay untouched.
 2. **Self-check report**: structured fix log + flags, with verdict (✅ Ready for review | ⚠️ Needs writer attention before review).
 
 ---
@@ -42,7 +42,7 @@ Separate article body from Draft notes appendix if present. Use Draft notes for 
 |---|---|---|---|
 | 1 | Banned clichés | Search body against `baseo-context` § Banned words and phrases | ✅ Yes |
 | 1b | Banned agency-speak | Search for the left column of the translation table (conversions, ROAS, organic visibility, impressions-as-success, etc.) | ✅ Yes (translate to investor language) |
-| 1c | Banned trust-killers | Search for guarantee phrases, "trust the process," "full-service," "all industries," "leads in 30 days," 10x promises | ❌ Flag only — usually requires sentence rework, and guarantees are STOP-level |
+| 1c | Banned trust-killers | Search for guarantee phrases, "trust the process," "full-service," "all industries," "leads in 30 days," 10x promises, and arrogant expertise claims ("we're the experts," "wrong team," "you're doing it wrong, hire us," "investors come to us because we're the best") | ❌ Flag only — usually requires sentence rework; guarantees are STOP-level |
 | 2 | Banned intro openers | Match first sentence against banned opener list | ✅ Yes (rewrite to Template A/B/C) |
 | 3 | Marketing-verb H2s | Search H2s for "unlock," "leverage," "supercharge," "harness," "empower" | ✅ Yes |
 | 4 | Package/price disclosure | Search for "Foundation," "Growth," "Domination," "PStarter," "$2,500," "$4,500," "$7,500," "$1,500," "/month" price patterns, "setup fee" | ✅ Yes (remove/rephrase) — EXCEPTION: "$4,500" inside the approved Florida case-study claim is allowed; verify context before fixing |
@@ -54,6 +54,7 @@ Separate article body from Draft notes appendix if present. Use Draft notes for 
 | 6 | First-party claim fidelity | Compare every BASEO result claim against the Approved claims library verbatim. Includes the 28-vs-42 check: any "42 leads" usage → flag | ❌ Flag only — STOP-level if a claim is invented |
 | 7 | Service fabrication | Search for claims that BASEO delivers anything on the Out-of-scope list, or services not in the catalog at all | ❌ Flag only — STOP-level issue |
 | 7b | Audience check | Detect seller-addressed passages ("if you need to sell your house fast...") — second-person aimed at homeowners | ❌ Flag only — STOP-level if structural |
+| 7c | Proprietary how over-disclosure | Detect BASEO delivery detail that policy keeps off the blog: named tool/vendor in a "we use [Tool]" context, BASEO-attributed per-month counts ("we build X pages/month," "X links/month"), or itemized internal QA/approval workflow. (Market stats like "$25–$120/click" or approved claims like "$161 per lead" are fine — those are data, not our process.) | ❌ Flag only — recommend trimming to WHAT/WHY |
 | 8 | H2 keyword coverage | Count H2s with primary keyword variation | ❌ Flag only |
 | 9 | H3 long-tail coverage | Count H3s with cluster variations | ❌ Flag only |
 | 10 | H2 length compliance | Most 3–8 words, max 12 | ❌ Flag only |
@@ -65,7 +66,7 @@ Separate article body from Draft notes appendix if present. Use Draft notes for 
 | 16 | Data points without source | Numbers lacking source AND not in Approved library | ❌ Flag only — never fabricate sources |
 | 17 | Image/list/table minimums | Count vs style-guide minimums | ❌ Flag only |
 | 18 | `[SCREENSHOT: ...]` placeholders | Count | ⚠️ Inventory for human |
-| 19 | `[PROCESS: ...]` placeholders | Count | ⚠️ Inventory for human |
+| 19 | Proprietary how-detail leak | Already covered by check 7c (named tool/vendor, per-month counts, internal workflow) | ❌ Flag only — recommend trim/reframe |
 | 20 | Featured snippet element present | Detect 40–60 word definition near top / 5–8 item list / comparison table | ❌ Flag only |
 | 21 | TOC (if > 1,500 words) | Bulleted H2 anchor list above first H2 | ❌ Flag only |
 | 22 | Closing section header | `## Final thoughts` / `## The bottom line` / `## What to do next` | ❌ Flag only |
@@ -182,16 +183,13 @@ For each check: ✅ pass / ⚠️ fixed (original → replacement, location) / �
 | Package/price disclosures | 0 | 0 | ✅/❌ |
 | Images / lists / tables | I:N L:N T:N | minimums | ✅/⚠️ |
 | `[SCREENSHOT]` placeholders | N | human fills | ⚠️ info |
-| `[PROCESS]` placeholders | N | human verifies | ⚠️ info |
+| Proprietary how-detail | 0 | none on blog | ✅/❌ |
 | Featured snippet element | present (type) / missing | present | ✅/❌ |
 | TOC | present / N/A / missing | per rule | ✅/⚠️ |
 | Closing section | "[header]" NN words | 100–200 | ✅/⚠️ |
 | CTA at end + URL valid | present / missing | audit CTA, verified URL | ✅/❌ |
 
-## Placeholders inventory (for human verification before publish)
-
-### Process placeholders
-- `[PROCESS: ...]` — service: [name] — section: H2 "[name]" — verify with Eddie/delivery
+## Placeholders inventory (for human completion before publish)
 
 ### Screenshot placeholders
 - `[SCREENSHOT: ...]` — section: H2 "[name]" — what to capture: [description]
@@ -204,7 +202,7 @@ For each check: ✅ pass / ⚠️ fixed (original → replacement, location) / �
 - **Don't make judgment calls.** Mechanical only. Interpretation needed → flag.
 - **Auto-fix only when meaning is preserved.**
 - **Don't invent content.** Never add sources, links, claims, or text.
-- **Don't remove placeholders.** `[SCREENSHOT: ...]` and `[PROCESS: ...]` are intentional.
+- **Don't remove `[SCREENSHOT: ...]` placeholders.** They're intentional, for the human to fill before publish.
 - **Don't change article structure.**
 - **Never "fix" a claim by adjusting the number.** Claim fidelity issues are flags for the writer, not edits.
 - **Verify, don't trust the Draft notes.**
@@ -218,4 +216,4 @@ For each check: ✅ pass / ⚠️ fixed (original → replacement, location) / �
 - Audit on-page elements in depth → `baseo-onpage-audit`.
 - Rewrite paragraphs or improve voice qualitatively.
 - Add data points, links, images, or content.
-- Verify BASEO delivery accuracy in `[PROCESS]` placeholders → human responsibility.
+- Rewrite paragraphs that over-disclose proprietary how → flag only; the writer reframes.

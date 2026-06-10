@@ -120,15 +120,15 @@ Density target: ~1.5× the brief's link count so the outline has options.
 For **Active** briefs:
 
 - List each BASEO service the brief flagged (canonical names from `baseo-context` § Service catalog).
-- For each, describe the **process shape** in 3–5 steps using ONLY what `baseo-services-reference` documents. Example: "Audit first (week 1, free, written) → tracking + foundation months 1–2 → city pages + situation pillars months 2–6 → AEO layer from month 3."
-- Note per service: **services-reference status** — ✅ documented at the needed depth / ❌ not documented → drafter inserts `[PROCESS: ...]` placeholder.
+- For each, capture the **WHAT + WHY hook** at the safe level defined in `baseo-services-reference` (what the service does and why it matters), NOT the proprietary how. The public timeline arc is fine ("audit week 1 → foundation months 1–2 → city pages + situation pillars months 2–6 → AEO from month 3"). Do NOT surface tool names, exact counts, or internal workflow even if you could find them — that detail is intentionally off the blog.
+- Note per service the **off-blog detail** the drafter must avoid (from each service's "Off-blog detail (omit)" line in the services reference), so the drafter knows where the line is.
 
 For **Tangential** briefs:
 
 - Confirm the BASEO connection sentence from the brief.
 - Identify which active service(s) the article could mention contextually (1–3 mentions total).
 - Note the CTA target (always soft, always the audit).
-- Do NOT propose process shapes — BASEO is not the protagonist.
+- Do NOT propose process/approach detail — BASEO is not the protagonist.
 
 ### Stage 7 — Notes for downstream skills
 
@@ -136,7 +136,7 @@ For **Tangential** briefs:
 - Snippet capture mechanics: candidate 40–60 word definition, or the list items / table rows the data supports.
 - Persona voice dial reminder (from brief).
 - Banned phrases to watch given the topic (e.g., for an AI-search article, "revolutionary" and "game-changing" are high-risk; for an agency-accountability article, watch for accidental guarantee language).
-- Placeholder strategy: which sections will need `[PROCESS: ...]` placeholders.
+- Off-blog detail to avoid: which service sections risk drifting into proprietary how-detail (tools, counts, workflow), so the drafter keeps them at the WHAT/WHY level.
 
 ---
 
@@ -217,8 +217,8 @@ For **Tangential** briefs:
 
 For Active briefs:
 - **Service(s) in play**: [canonical name(s)]
-- **Process shape**: [3–5 steps from baseo-services-reference]
-- **Services-reference status**: ✅ documented / ❌ not documented — drafter inserts `[PROCESS: ...]`
+- **WHAT + WHY hook**: [the safe approach + why it matters, from baseo-services-reference]
+- **Off-blog detail to avoid**: [the "Off-blog detail (omit)" items for each service — tools, counts, workflow]
 
 For Tangential briefs:
 - **BASEO connection (from brief)**: "[one sentence]"
@@ -235,7 +235,7 @@ For Tangential briefs:
 ### For `baseo-draft`
 - Persona voice dial: [B1–B5 notes]
 - Banned phrases to watch (topic-specific risk): [list]
-- Placeholder strategy: [sections needing `[PROCESS: ...]`]
+- Off-blog detail to avoid: [sections at risk of proprietary how-detail — keep at WHAT/WHY]
 
 ## Flags
 

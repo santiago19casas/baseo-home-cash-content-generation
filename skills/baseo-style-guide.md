@@ -30,7 +30,7 @@ This style guide does NOT redefine any of those. It defines how to WRITE — voi
 
 You are an operator who happens to know SEO, talking to another operator. The reader closes real estate deals for a living, has been burned by at least one agency, and can smell a pitch from the subject line. He wants the bottom line, the numbers that matter (leads, cost per lead, cost per deal), and proof from someone in his exact niche. Write short. Write blunt. Show the math. Show the work. Never lecture, never hype, never use the words his last agency used. Respect is earned by specificity: name the keyword, name the cost per click, name the month the leads showed up.
 
-This is the Ahrefs-style practitioner voice with two tilts: (1) everything translates to deals and dollars, because that's how the reader thinks; (2) radical transparency about method, because the reader's default assumption is that agencies hide the work. We give away the playbook. The reader who DIYs it was never going to be a client; the one who values his time calls us.
+This is the Ahrefs-style practitioner voice with two tilts: (1) everything translates to deals and dollars, because that's how the reader thinks; (2) teach the approach, not the operations manual. We explain WHAT good investor SEO looks like and WHY it works, in enough depth to prove we know the niche cold. We do NOT publish HOW we execute it (the tools, the exact counts, the internal workflow). Mentioning that BASEO does the work is enough; spelling out the how just hands the playbook to competitors. The reader who wants to DIY the concept was never going to be a client; the one who values his time sees the expertise and calls us.
 
 ---
 
@@ -247,42 +247,47 @@ If a sentence cannot be backed with a number, a quote, or a link, question wheth
 
 ## Service integration (the most important rule)
 
-BASEO must appear **as the method inside the playbook**, not as a sales pitch bolted to the end. For an agency, "the product is the process" — so showing the process IS the product placement. We explain exactly what we do, step by step, openly.
+Name it, prove the why, skip the how. BASEO appears **as the approach behind the result**, not as a sales pitch bolted to the end and not as an operations manual that hands competitors our process. There are three levels of detail, and the line between them is the whole rule:
 
-### Good pattern
+1. **The WHAT and the WHY** (explain freely): the conceptual approach and the reason it works. "You need a unique page for every city you buy in, because Google's Scaled Content Abuse policy crushed swap-the-city-name templates." This teaches, demonstrates expertise, and is what makes the article rank and persuade. Go deep here.
+2. **THAT we do it** (state plainly): "BASEO builds those city pages, installs the tracking, and rebuilds your Google Business Profile." A clear statement that BASEO handles it. This is the product placement.
+3. **The proprietary HOW** (never publish): which call-tracking vendor, exactly how many pages or links per month, the internal QA and approval workflow, the specific AI-citation tooling, the link-outreach methodology. This NEVER goes on the blog. Mentioning that we do it is enough; readers will assume that's what should be done. Detailing how we do it only hands the playbook to competitors and dates the article when our stack changes. If a sentence seems to need a level-3 detail to land, that's the signal to rewrite the sentence at the WHAT/WHY level, not to add the detail.
 
-> Here's the page architecture we build for every client, in order:
+### Good pattern (WHAT + WHY + that-we-do-it, no proprietary how)
+
+> Most investor sites lose on one thing: the homepage is the only real page. On the sites that actually pull leads, the work sits in city pages and seller-situation pages, each one original to its market and its situation (probate, foreclosure, divorce, inherited, problem tenants). Template pages that just swap the city name got hit hard by Google's March 2024 update.
 >
-> 1. Tracking first (call tracking + form tracking + GA4 + Search Console). If you can't count leads, nothing else matters.
-> 2. City landing pages, one per market, each with original local content. This is where 60%+ of leads land.
-> 3. Seller-situation pillars: probate, foreclosure, divorce, inherited, problem tenants. The searches sellers type when they're stressed.
-> 4. AI-search formatting on top, so ChatGPT and Perplexity can cite the pages.
->
-> The order matters. Situation pages without tracking is how your last agency hid for 8 months.
+> That's the core of what BASEO builds, and we install the lead tracking first so every call and form is counted from day one. The order matters: situation pages without tracking is how your last agency hid for 8 months.
 
-The method is the article. The reader can execute it himself — or recognize the work involved and call us.
+The reader understands the approach and why it works, and knows BASEO does it. He does not get a step-by-step operations manual.
 
-### Banned pattern
+### Too-much-detail pattern (pull it back)
+
+> ❌ "We build 18 city pages in month one using [specific tool], run them through our 6-step internal QA checklist, then push 4 editorial links per month via our outreach SOP..."
+
+Specific counts, named tools, and internal workflow. That's the proprietary how. Cut it to the WHAT/WHY/that-we-do-it level. The drafter never publishes level-3 detail and never leaves a placeholder for it: if a point can't be made without operational specifics, the point gets reframed, not flagged.
+
+### Banned pattern (the empty name-drop)
 
 > ❌ "There are many agencies that can help with this. One option is BASEO, which offers a range of SEO services for investors. Learn more at the end of this article."
 
-That sentence reduces BASEO to a footnote and sounds like every vendor. Delete it. Replace with the playbook.
+That reduces BASEO to a footnote and sounds like every vendor. Delete it. Replace with the WHAT + WHY framing above.
 
 ### Frequency by funnel stage
 
 Defined in `baseo-context` § Funnel stages. Summary:
 
 - **TOFU**: 2–4 mentions, first before halfway point, soft audit CTA at end.
-- **MOFU**: 4–8 mentions, the playbook IS BASEO's process, mid-post + end CTAs.
+- **MOFU**: 4–8 mentions, the approach described is what BASEO does (WHAT + WHY, not the proprietary how), mid-post + end CTAs.
 - **BOFU**: protagonist, named in nearly every section, hard CTA with multiple touches.
 
-### Mention vs. method
+### Mention vs. empty name-drop
 
-Don't confuse mentioning BASEO ("BASEO builds city pages") with showing the method ("we build one page per market, each with original local data: median days-on-market, the neighborhoods we buy in, real local proof — because Google's Scaled Content Abuse policy kills swap-the-city-name templates"). The method persuades. The mention only reminds.
+Don't confuse a clear statement of what BASEO does, framed with the why ("BASEO builds a unique page per market instead of templates, because Google penalizes duplicate city pages"), with a hollow name-drop ("BASEO can help with SEO"). The first persuades by showing you understand the problem. The second only reminds. Note: persuading does NOT require revealing the proprietary how — the why does the work.
 
-### Process accuracy
+### Process detail: never published
 
-When describing how BASEO delivers a service, use `baseo-services-reference.md`. If the process detail isn't documented there, insert a `[PROCESS: shape description — verify against current BASEO delivery before publishing]` placeholder rather than inventing specifics (timelines, deliverable counts, report formats). Invented delivery details are the agency version of hallucinated UI paths.
+The proprietary how (tools, vendors, exact counts, internal workflow) never goes on the blog. The drafter writes at the WHAT/WHY/that-we-do-it level and stops there. `baseo-services-reference.md` defines what's safe to state about delivery; each service lists its "Off-blog detail (omit)" line so the line is explicit. If a draft drifts into operational specifics, the writer cuts them or reframes the sentence at the WHAT/WHY level. There is no placeholder and no exception: never invent delivery specifics, and never leave a level-3 detail (or a marker for one) in the article.
 
 ---
 
@@ -393,6 +398,24 @@ Final section header: `## Final thoughts` (or `## The bottom line`, `## What to 
 >
 > If you want to know exactly what's broken on your site and what your top competitor did instead, that's what the audit is for. Free, in writing, delivered in 2 business days. No call required. [Get your free site audit →](https://thebaseo.net/#contact)
 
+### The expertise close (sanctioned — for playbook / MOFU articles)
+
+After an article that lays out how the work is done, a confident "this is how we do it, and here's what it means for you" beat is allowed and effective. But it only works in the consultative form, where the reader draws the conclusion. The authority is anchored in **specialization** (we work only with cash home buyers, so we already know your market), not in self-praise.
+
+**Good (consultative — reader concludes):**
+> That's the whole playbook, and every piece of it is work, every month. Some operators run it themselves and do fine. Most would rather spend that time closing deals. If you want to know which pieces your site is missing before you decide either way, that's what the audit is for. We work only with cash home buyers, so it already knows your competitors, your keywords, and your seller situations. Free, in writing, no call. [Get your free site audit →](https://thebaseo.net/#contact)
+
+What makes it work: it offers the reader the out ("some run it themselves and do fine"), which is the confidence move this burned ICP respects, and it proves expertise by specialization rather than claiming it.
+
+**Bad (arrogant — triggers the burned-investor allergy):**
+> ❌ "That's how we do it. If your setup doesn't look like this, you're with the wrong team. It's why we're the experts in cash home buyers and why investors come to us."
+
+"Wrong team," "we're the experts," "come to us" is exactly the agency arrogance the ICP distrusts (see `baseo-context` § Banned trust-killers). It claims authority instead of proving it and pushes instead of letting the reader decide.
+
+### Frequency cap on the expertise nudge
+
+The "this is how we do it / here's the gap you have" self-referential nudge appears **at most once or twice per article, ideally once, in the close**. Three or more times reads as self-promotion and pulls the article back toward the agency-pitch tone the ICP rejects. The cap is on this specific nudge, not on BASEO mentions overall (which follow the funnel-stage frequency). When in doubt, use it once, at the end.
+
 ---
 
 ## Anti-patterns
@@ -410,12 +433,13 @@ Three or more banned phrases in a draft → automatic return for revision. The i
 - Most paragraphs are 1–3 sentences.
 - At least 3 sentences carry a specific number with a source; at least one converts to deal math.
 - Every first-party result claim traces to the Approved claims library.
-- BASEO appears as a method/playbook at least once (not just a CTA), per the brief's framing.
+- BASEO appears as the approach (WHAT + WHY + that-we-do-it) at least once, not just a CTA and not as a proprietary operations manual, per the brief's framing.
 - No package names, no BASEO prices, no ranking or lead guarantees.
 - 4–8 internal links per 1,000 words, descriptive anchors, pulled from `baseo-corpus.csv`.
 - At least 2 images + 1 list + 1 table.
 - No banned phrases, no agency-speak left untranslated.
 - Reads like an operator wrote it — do the B1 read-through (Voice rule 9).
+- The expertise nudge ("this is how we do it / here's your gap") appears at most 1–2 times, ideally once in the close, and in the consultative form (never "wrong team / we're the experts").
 - Final thoughts section is 100–200 words and ends with the audit CTA.
 
 ---

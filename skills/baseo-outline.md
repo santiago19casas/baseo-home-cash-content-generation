@@ -16,7 +16,7 @@ Trigger phrases: "outline this brief," "expand into outline," "build the article
 - The **research dossier** from `baseo-research` (mandatory).
 - `baseo-context` — for canonical URLs, claims policy, banned phrases, Tangential criteria.
 - `baseo-style-guide` — for intro templates, H2/H3 rules, visual cadence minimums, snippet patterns, paragraph rhythm.
-- `baseo-services-reference.md` (optional) — when present, the outline can specify real BASEO process steps. When absent or undocumented for a service, process moments are flagged with `[PROCESS: shape description]` for the drafter.
+- `baseo-services-reference.md` (optional) — defines the WHAT/WHY level that's safe to state per service and the "Off-blog detail (omit)" line marking what never gets published. The outline plans service mentions at that level only; never plans proprietary how-detail.
 
 ---
 
@@ -75,7 +75,7 @@ Produce: template chosen, hook idea (1 sentence), word target (< 80), first BASE
 4. **Internal link placement**: 1–3 links from corpus candidates with anchor text and URL.
 5. **External link placement**: Tier 1/2 sources placed with the claim they back.
 6. **BASEO reference**:
-   - **Active brief**: does this section name a service, show the process, or both? If a process is needed AND `baseo-services-reference` documents it at the needed depth, specify the steps. If not documented → `[PROCESS: shape — e.g., 'audit reviews site, competitors, market; delivered written in ~2 business days']`.
+   - **Active brief**: does this section explain a service's WHAT + WHY and state that BASEO does it? Plan it at that level using the "documented" content in `baseo-services-reference`. NEVER plan proprietary how-detail (tools, exact counts, internal workflow) — that's permanently off the blog. If a planned point seems to need it, plan a WHAT/WHY reframe instead. No placeholders.
    - **Tangential brief**: "BASEO mentioned here (count N/3)" or "no BASEO mention this section." Total stays 1–3.
 7. **Visual element**: image, table, or list per the visual plan, with caption skeleton. Prefer proof visuals (SERP screenshots, traffic curves, report excerpts).
 8. **Snippet capture (only in the designated H2)**: paragraph → write the 40–60 word candidate definition; list → the 5–8 items; table → headers + rows.
@@ -168,7 +168,7 @@ Any ❌ requires fix BEFORE the drafter runs. ⚠️ is acceptable with explicit
   ...
 - **Internal links**: "[anchor]" → [corpus URL]
 - **External links**: "[claim]" backed by [Tier 1/2 URL]
-- **BASEO reference**: [process steps + services-reference status | "[PROCESS: ...]" | "mention (count N/3)" | none]
+- **BASEO reference**: [WHAT/WHY + that-we-do-it for the service | "mention (count N/3)" for Tangential | none]
 - **Visual element**: [image/table/list/none] — [description]
 - **Snippet capture**: [yes — type + exact structure / no]
 
@@ -208,7 +208,7 @@ Any ❌ requires fix BEFORE the drafter runs. ⚠️ is acceptable with explicit
 - Persona voice dial: [B1–B5 notes from brief/dossier]
 - Banned phrases to watch: [topic-specific list]
 - Snippet capture is in H2 "[name]" — build exactly as planned
-- `[PROCESS: ...]` placeholders to insert: [list of sections]
+- Sections where a WHAT/WHY reframe replaces tempting how-detail: [list, if any]
 ```
 
 ---
@@ -218,7 +218,7 @@ Any ❌ requires fix BEFORE the drafter runs. ⚠️ is acceptable with explicit
 - **Do not write article prose.** Sub-bullets describe; the drafter writes.
 - **Every data point must trace to the dossier.** First-party claims verbatim from the Approved library; external stats only with dossier-verified sources.
 - **Every URL must trace to the brief or dossier.** No fabricated URLs.
-- **Don't propose BASEO delivery specifics unless `baseo-services-reference` documents them.** Use `[PROCESS: ...]` placeholders otherwise.
+- **Don't plan proprietary BASEO delivery specifics (tools, exact counts, internal workflow).** Plan service mentions at the WHAT/WHY level from `baseo-services-reference`; reframe rather than reveal. No placeholders.
 - **No guarantee language, no package names, no BASEO prices** anywhere in the plan.
 - **Honor the brief's framing.** Active = process positioning + full mention frequency. Tangential = 1–3 contextual mentions, soft audit CTA, no process positioning.
 - **Flag, don't fix silently.** Heading structure issues surface in Flags; the editor decides.

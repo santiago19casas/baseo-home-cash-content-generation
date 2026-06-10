@@ -75,7 +75,7 @@ Quote exact value + char count. Propose a copy-pasteable replacement if flagged.
 | **Visual minimums** | ≥ 2 images, ≥ 1 list, ≥ 1 table | Below any minimum |
 | **Closing section** | `## Final thoughts` (or `## The bottom line` / `## What to do next`), 100–200 words | Missing, > 300 or < 50 words |
 
-Count both real images and `[SCREENSHOT: ...]` placeholders; if only placeholders, note that real visuals must be added before publishing. Also inventory `[PROCESS: ...]` placeholders as a publication blocker (verify with Eddie before publish).
+Count both real images and `[SCREENSHOT: ...]` placeholders; if only placeholders, note that real visuals must be added before publishing.
 
 ### Check 4 — CTA
 
@@ -141,7 +141,6 @@ Match the blog's source language (skill names stay in English). Quote the origin
 | Lists | N ✅/❌ | — |
 | Tables | N ✅/❌ | — |
 | Closing section | ✅/❌ | [first sentence, NN words] |
-| `[PROCESS]` placeholders | N | [list — verify before publish] |
 
 ---
 

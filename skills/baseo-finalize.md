@@ -2,7 +2,7 @@
 
 ## Description
 
-Phase 4 of the BASEO content pipeline. Takes a polished article that has passed `baseo-self-check` and editorial review, and produces a `.docx` file editable in Google Drive. The output is the production-ready handoff: upload to Drive, add real visuals for the `[SCREENSHOT: ...]` placeholders, verify `[PROCESS: ...]` placeholders with Eddie/delivery, final polish, publish to the BASEO blog.
+Phase 4 of the BASEO content pipeline. Takes a polished article that has passed `baseo-self-check` and editorial review, and produces a `.docx` file editable in Google Drive. The output is the production-ready handoff: upload to Drive, add real visuals for the `[SCREENSHOT: ...]` placeholders, final polish, publish to the BASEO blog.
 
 Trigger phrases: "finalize this article," "convert to docx," "prepare for upload," "build the deliverable," plus Spanish equivalents ("finaliza el artículo," "convierte a docx," "prepara para subir a Drive").
 
@@ -29,10 +29,9 @@ A single `.docx` in the article folder, named after the article (e.g., `seo-vs-p
 2. **Article title** as H1; intro; TOC (if present) with anchor links.
 3. **All body sections** with H2/H3 hierarchy, native Word tables, working hyperlinks, bold/italic preserved.
 4. **Image placeholders** as yellow-background boxes with the `[SCREENSHOT: ...]` text in monospace.
-5. **Process placeholders** as orange-background boxes with the `[PROCESS: ...]` text in monospace — these flag BASEO delivery details that need verification with Eddie before publishing.
-6. **Final thoughts** + **CTA** formatted as a distinct callout box.
+5. **Final thoughts** + **CTA** formatted as a distinct callout box.
 
-NOT produced: the Draft notes appendix (stripped), the self-check report, real screenshots, verified delivery details.
+NOT produced: the Draft notes appendix (stripped), the self-check report, real screenshots.
 
 ---
 
@@ -90,11 +89,9 @@ Invoke `anthropic-skills:docx` (read its SKILL.md first if not loaded). Map: H1 
 
 **Image placeholders (`[SCREENSHOT: ...]`)**: single-cell table, light yellow background (#FFF2CC), monospace text, full width. Caption (if present) as italic text below the box.
 
-**Process placeholders (`[PROCESS: ...]`)**: single-cell table, light orange background (#FCE4D6), monospace text, full width. Orange ≠ yellow so the editor distinguishes "need visual" from "need delivery verification" at a glance.
-
 **CTA callout box**: single-cell table, light gray background or thick border, CTA text + hyperlink bolder/larger than body. Example:
 
-> **Get your free site audit →** ([https://thebaseo.net/#contact](https://thebaseo.net/#contact))
+> **Get your free site audit →** ([https://www.thebaseo.com/home-cash-buyers-seo/#hero](https://www.thebaseo.com/home-cash-buyers-seo/#hero))
 
 Placed at the end, after Final thoughts.
 
@@ -102,7 +99,7 @@ Placed at the end, after Final thoughts.
 
 Save to the article folder: `articles-in-progress/[primary-keyword-slug]/[primary-keyword-slug].docx`. If run standalone, save to the current working folder.
 
-Provide a link to the file in the chat response, plus a handoff summary: file location, screenshot placeholder count, process placeholder count, CTA verification status, next steps.
+Provide a link to the file in the chat response, plus a handoff summary: file location, screenshot placeholder count, CTA verification status, next steps.
 
 ---
 
@@ -133,9 +130,6 @@ Upload to Google Drive. Drive opens it as a Google Doc for editing.
 ### Visuals to add: N
 - `[SCREENSHOT: ...]` — section H2 "[name]"
 
-### Delivery details to verify with Eddie: N
-- `[PROCESS: ...]` — service [name] — section H2 "[name]"
-
 ## CTA verified
 
 - Text: "[CTA text]"
@@ -145,9 +139,8 @@ Upload to Google Drive. Drive opens it as a Google Doc for editing.
 
 1. Open the .docx in Google Drive (right-click → Open with Google Docs)
 2. Replace each yellow box with the real visual (SERP screenshot, chart, report excerpt)
-3. Verify each orange box's delivery detail with Eddie, replace with accurate prose
-4. Final polish edit if needed
-5. Copy to the CMS and publish
+3. Final polish edit if needed
+4. Copy to the CMS and publish
 ```
 
 ---
@@ -155,7 +148,7 @@ Upload to Google Drive. Drive opens it as a Google Doc for editing.
 ## Hard rules
 
 - **Don't modify article content.** Finalize is format-and-package. Content issues → back to the writer.
-- **Don't fill placeholders.** Yellow and orange boxes stay verbatim for the human.
+- **Don't fill placeholders.** Yellow `[SCREENSHOT: ...]` boxes stay verbatim for the human.
 - **Strip the Draft notes appendix.**
 - **Verify the CTA URL** against `baseo-context` § Canonical URLs. Unverified → STOP.
 - **Run the compliance spot-check** (prices, packages, guarantees) — any hit STOPs the finalize.
@@ -171,7 +164,7 @@ Upload to Google Drive. Drive opens it as a Google Doc for editing.
 - Evaluate content → `baseo-content-review` (runs before).
 - Audit on-page → `baseo-onpage-audit` (runs before).
 - Auto-fix or rewrite → `baseo-self-check` / `baseo-draft`.
-- Capture real visuals or verify delivery details → human, in Drive.
+- Capture real visuals → human, in Drive.
 - Publish to the CMS → manual or future automation.
 - Generate new content or metadata beyond what brief + article establish.
 - Translate the article.
