@@ -388,10 +388,12 @@ Skills must use only URLs verified to exist. Do not fabricate URLs. If unsure, o
 
 | Purpose | URL | Status |
 |---|---|---|
-| Marketing site root | `https://thebaseo.net` | ✅ verified |
-| Free audit CTA (homepage contact section) | `https://thebaseo.net/#contact` | ✅ verified (homepage anchor) |
-| Blog root | `https://thebaseo.net/blog/` | ⚠️ VERIFY — Eddie: confirm the blog path and update |
-| Case study / results page | — | ⚠️ ADD when it exists as a standalone URL |
+| Marketing site root | `https://www.thebaseo.com` | ✅ verified |
+| Cash buyers — pillar (service landing) | `https://www.thebaseo.com/home-cash-buyers-seo/` | ✅ verified |
+| Free audit CTA (Pilar contact section) | `https://www.thebaseo.com/home-cash-buyers-seo/#hero` | ✅ verified (homepage anchor) |
+| Contact Us Page | `https://www.thebaseo.com/contact/` | ✅ verified |
+| Blog root | `https://www.thebaseo.com/home-cash-buyers-seo/resources/` | ✅ verified |
+| Case study / results page | `https://www.thebaseo.com/home-cash-buyers-seo/case-studies/` | ✅ verified |
 
 **Eddie maintains this table.** Until a row is marked ✅, skills must not link to it. For internal links inside the body, only use URLs that appear in `baseo-corpus.csv`. If the corpus doesn't have a relevant link, skip it — don't invent.
 
