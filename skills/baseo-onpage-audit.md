@@ -85,7 +85,7 @@ Count both real images and `[SCREENSHOT: ...]` placeholders; if only placeholder
    - **TOFU**: one soft audit CTA near the end, zero-pressure framing ("free, written, no call required"). Not in first 200 words.
    - **MOFU**: mid-post + end CTAs, tied to the workflow shown.
    - **BOFU**: multiple touches; commercial detail allowed ("pricing for your market is included in the audit").
-4. **URL validity**: every CTA URL must be a ✅-verified entry in `baseo-context` § Canonical URLs, OR a thebaseo.net URL present in `baseo-corpus.csv`. Anything else → flag as potentially fabricated.
+4. **URL validity**: every CTA URL must be a ✅-verified entry in `baseo-context` § Canonical URLs, OR a thebaseo.com URL present in `baseo-corpus.csv`. Anything else → flag as potentially fabricated.
 5. **CTA voice**: no banned clichés, no pressure tactics ("spots filling fast"), no guarantees. Failing voice → propose a replacement matching persona + stage and the brand's risk-reversal framing.
 
 Missing, generic ("subscribe"), or mismatched CTA → propose a specific replacement with a verified URL.

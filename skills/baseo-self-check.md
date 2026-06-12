@@ -60,7 +60,7 @@ Separate article body from Draft notes appendix if present. Use Draft notes for 
 | 10 | H2 length compliance | Most 3–8 words, max 12 | ❌ Flag only |
 | 11 | Paragraph rhythm | Paragraphs > 4 sentences | ❌ Flag only |
 | 12 | BASEO mention count | vs framing × funnel from brief (or infer) | ❌ Flag only |
-| 13 | Internal link count | Links to thebaseo.net | ❌ Flag only |
+| 13 | Internal link count | Links to thebaseo.com | ❌ Flag only |
 | 14 | Internal link URL validity | Verify against `baseo-corpus.csv` / `baseo-context` § Canonical URLs | ❌ Flag only |
 | 15 | External link count | Tier 1/2 citations | ❌ Flag only |
 | 16 | Data points without source | Numbers lacking source AND not in Approved library | ❌ Flag only — never fabricate sources |
@@ -176,7 +176,7 @@ For each check: ✅ pass / ⚠️ fixed (original → replacement, location) / �
 | Total word count | NNNN | NN–NN | ✅/⚠️ |
 | H2 keyword coverage | N/M (P%) | ≥ 60% | ✅/⚠️ |
 | BASEO mentions | N | framing×funnel | ✅/⚠️ |
-| Internal links (thebaseo.net) | N | N–N | ✅/⚠️ |
+| Internal links (thebaseo.com) | N | N–N | ✅/⚠️ |
 | External Tier 1/2 citations | N | ≥ 3 | ✅/⚠️ |
 | Claims: first-party verbatim / external sourced | ✅/❌ | all | ✅/❌ |
 | Guarantee language | 0 | 0 | ✅/❌ |

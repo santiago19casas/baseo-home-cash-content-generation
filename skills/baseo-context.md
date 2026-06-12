@@ -20,7 +20,7 @@ When in doubt, this file wins over anything else.
 
 BASEO (TheBaseo) is an SEO + AI Search (AEO) agency that works **exclusively with cash home buyers** — "we buy houses" real estate investors in the USA and Canada who buy, hold, flip, wholesale, and work foreclosures, probate, and inherited properties. BASEO builds the organic lead channel for these operators: technical foundation, programmatic city landing pages, seller-situation content, AI search optimization, editorial backlinks, and lead-focused reporting.
 
-The blog this system feeds is **thebaseo.net's own blog**. The reader is the **investor** (BASEO's prospect), NOT the motivated seller. Content that speaks to homeowners trying to sell their house belongs on client sites, never on the BASEO blog. Any article addressed to a seller is automatically out of scope.
+The blog this system feeds is **thebaseo.com's own blog** (the Astro frontend at www.thebaseo.com, backed by the WordPress REST API at cms.thebaseo.com). The reader is the **investor** (BASEO's prospect), NOT the motivated seller. Content that speaks to homeowners trying to sell their house belongs on client sites, never on the BASEO blog. Any article addressed to a seller is automatically out of scope.
 
 BASEO is **NOT**: a lead-selling marketplace (no pay-per-lead), a web design shop, a CRM or follow-up software vendor, a direct mail house, a coaching/guru program, a "full-service digital marketing agency," or an SEO tool. BASEO can write ABOUT those topics (tangential education), but any article claiming BASEO sells those services is fabrication.
 
@@ -398,7 +398,7 @@ Skills must use only URLs verified to exist. Do not fabricate URLs. If unsure, o
 
 **Eddie maintains this table.** Until a row is marked ✅, skills must not link to it. For internal links inside the body, only use URLs that appear in `baseo-corpus.csv`. If the corpus doesn't have a relevant link, skip it — don't invent.
 
-Default CTA URL: the free audit (`https://thebaseo.net/#contact`) until a dedicated audit page URL is verified.
+Default CTA URL: the free audit, `https://www.thebaseo.com/home-cash-buyers-seo/#hero` (the verified pillar hero/contact section).
 
 ---
 

@@ -396,14 +396,14 @@ Final section header: `## Final thoughts` (or `## The bottom line`, `## What to 
 **Example**:
 > The investors winning organic in your market aren't smarter. They started 18 months earlier and built the pages you haven't built yet.
 >
-> If you want to know exactly what's broken on your site and what your top competitor did instead, that's what the audit is for. Free, in writing, delivered in 2 business days. No call required. [Get your free site audit →](https://thebaseo.net/#contact)
+> If you want to know exactly what's broken on your site and what your top competitor did instead, that's what the audit is for. Free, in writing, delivered in 2 business days. No call required. [Get your free site audit →](https://www.thebaseo.com/home-cash-buyers-seo/#hero)
 
 ### The expertise close (sanctioned — for playbook / MOFU articles)
 
 After an article that lays out how the work is done, a confident "this is how we do it, and here's what it means for you" beat is allowed and effective. But it only works in the consultative form, where the reader draws the conclusion. The authority is anchored in **specialization** (we work only with cash home buyers, so we already know your market), not in self-praise.
 
 **Good (consultative — reader concludes):**
-> That's the whole playbook, and every piece of it is work, every month. Some operators run it themselves and do fine. Most would rather spend that time closing deals. If you want to know which pieces your site is missing before you decide either way, that's what the audit is for. We work only with cash home buyers, so it already knows your competitors, your keywords, and your seller situations. Free, in writing, no call. [Get your free site audit →](https://thebaseo.net/#contact)
+> That's the whole playbook, and every piece of it is work, every month. Some operators run it themselves and do fine. Most would rather spend that time closing deals. If you want to know which pieces your site is missing before you decide either way, that's what the audit is for. We work only with cash home buyers, so it already knows your competitors, your keywords, and your seller situations. Free, in writing, no call. [Get your free site audit →](https://www.thebaseo.com/home-cash-buyers-seo/#hero)
 
 What makes it work: it offers the reader the out ("some run it themselves and do fine"), which is the confidence move this burned ICP respects, and it proves expertise by specialization rather than claiming it.
 

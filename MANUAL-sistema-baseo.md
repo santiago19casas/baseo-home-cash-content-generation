@@ -10,7 +10,7 @@ Espejo directo del sistema Schemafy: misma arquitectura, mismo flujo, adaptado a
 
 ### Qué es el sistema
 
-Un pipeline editorial completo construido sobre 12 skills de Claude que automatiza la creación, revisión y producción de artículos para el blog de thebaseo.net. El lector objetivo es el **cash home buyer** (el prospecto de la agencia), NUNCA el motivated seller.
+Un pipeline editorial completo construido sobre 12 skills de Claude que automatiza la creación, revisión y producción de artículos para el blog de thebaseo.com. El lector objetivo es el **cash home buyer** (el prospecto de la agencia), NUNCA el motivated seller.
 
 ### Qué resuelve
 
@@ -90,11 +90,11 @@ APROBADO → baseo-finalize
 
 **El archivo que tu equipo mantiene además de las referencias:**
 
-`baseo-corpus.csv` — sitemap del blog de thebaseo.net. Formato (4 columnas, tolera columnas extra):
+`baseo-corpus.csv` — sitemap del blog de thebaseo.com. Formato (4 columnas, tolera columnas extra):
 
 ```csv
 url,title,meta_description,primary_keyword
-https://thebaseo.net/blog/xxx,"Article Title","Meta description 140-160 chars",primary keyword
+https://www.thebaseo.com/home-cash-buyers-seo/resources/xxx,"Article Title","Meta description 140-160 chars",primary keyword
 ```
 
 Actualización semanal. Sin esto, el internal linking no genera sugerencias.
@@ -136,7 +136,7 @@ baseo-home-cash-content-generation/
 
 ### Pendientes de Eddie ANTES del primer artículo (importante)
 
-1. **Verificar URLs canónicas** en `baseo-context.md` § Canonical URLs: confirmar la URL real del blog (¿`thebaseo.net/blog/`?) y la URL del CTA de audit. Las filas marcadas ⚠️ VERIFY bloquean linking hasta confirmarse.
+1. **URLs canónicas** ✅ ya resueltas en `baseo-context.md` § Canonical URLs (dominio `www.thebaseo.com`, CTA de audit `https://www.thebaseo.com/home-cash-buyers-seo/#hero`, blog root `/home-cash-buyers-seo/resources/`, todas verificadas). Mantén esa tabla al día si cambian rutas.
 2. **Resolver el 28 vs 42**: el sitio usa "3 → 28 leads" en el stats block y "3 to 42" en el case study heading. El sistema está estandarizado en **28** y flagea cualquier "42". Si prefieres 42, edita la Approved claims library en `baseo-context.md`.
 3. **Crear `baseo-corpus.csv`** con los artículos ya publicados (aunque sean pocos — 5-10 filas bastan para validar el internal linking).
 4. **Revisar `baseo-services-reference.md`**: las líneas "Off-blog detail (omit)" listan lo que NO va al blog por política (tool stack, volúmenes mensuales, workflow interno). No es que falte documentarlo — es que se omite a propósito. Solo decides hacer público un dato operativo si tú lo apruebas explícitamente. Revisa que el contenido marcado como "documented" (lo que SÍ se puede afirmar) refleje cómo describes tus servicios de cara al cliente.
