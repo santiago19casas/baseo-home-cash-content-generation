@@ -64,9 +64,9 @@ Everything must be explicitly defined.
 
 ## BASEO brand identity (for hero + diagram images)
 
-⚠️ **Eddie: set these once.** SERP / GBP / dashboard images mimic Google/analytics chrome, so brand color barely applies to them. But hero scenes and diagrams should feel on-brand. Defaults below until confirmed:
+SERP / GBP / dashboard images mimic Google/analytics chrome, so brand color barely applies to them. Hero scenes and diagrams should feel on-brand. Confirmed palette:
 
-- **Palette**: professional and trustworthy. Default placeholder: deep navy/charcoal base with a single confident accent (blue or green). Replace with BASEO's real brand colors.
+- **Palette**: deep navy/charcoal base with a single confident blue accent. Professional and trustworthy. (Green is an acceptable secondary accent if a specific diagram calls for it, but blue is the default.)
 - **Logo**: do not fabricate a BASEO logo in images. Leave space for it if a hero needs branding; the publisher adds the real logo if wanted.
 - **Tone**: grounded, credible, "real operator," not glossy SaaS. No purple gradients, no neon, no cyberpunk, no glassmorphism, no AI-art look.
 
@@ -273,7 +273,7 @@ Layout: [DETAIL — e.g., "a pyramid in three tiers. Top tier labeled 'City land
 
 [OR for deal math: "two columns side by side. Left column 'PPC' with '~$7,500 per deal' in large type. Right column 'Organic (mature)' with '$500–$2,000 per deal'. A small note: 'Same leads. Different math.'"]
 
-Palette: BASEO brand colors — [navy/charcoal base + one accent; Eddie to confirm exact hex]. White background. Readable sans-serif labels. Clean arrows/connectors. No clutter.
+Palette: BASEO brand colors — deep navy/charcoal base + a blue accent. White background. Readable sans-serif labels. Clean arrows/connectors. No clutter.
 
 NEVER include: clip-art, cartoon style, neon, glassmorphism, tiny unreadable text, AI-art look.
 
