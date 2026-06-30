@@ -334,6 +334,10 @@ The reader's eye should hit something visual roughly every 400–500 words. Mix 
 
 Every image gets a caption that adds context. "Screenshot of Google Analytics" is not a caption. "The 'Direct' traffic spike in GA4 that turned out to be ChatGPT referrals" is a caption.
 
+### Image generation prompts
+
+Every image placeholder the drafter writes is a `[SCREENSHOT: ...]` block immediately followed by a `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` block (built from `baseo-image-prompts`). Both blocks are uploaded and visible in the WordPress draft. The publisher copies the prompt into ChatGPT, gets the image, and replaces both blocks with the real image in the editor (they're working-draft markers, removed once the real image is in). See `baseo-image-prompts` for categories (Google SERP, GBP/local, lead dashboard, hero, diagram) and templates.
+
 ---
 
 ## Tables and lists for SEO and readability

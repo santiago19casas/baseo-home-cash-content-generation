@@ -16,8 +16,9 @@ Trigger phrases: "draft this article," "write the draft from the outline," "gene
 - `baseo-context` — for canonical URLs, banned clichés + agency-speak + trust-killers, pricing disclosure policy (NEVER disclose), Approved claims library, Tangential rules.
 - `baseo-style-guide` — voice rules 1–9, persona dials, intro patterns, H2/H3 rules, paragraph rhythm, deal-math sentences, service integration, internal linking, visual cadence, closes.
 - `baseo-services-reference.md` — for the WHAT/WHY level that's safe to state about each service, plus the "Off-blog detail (omit)" line per service marking what never gets published.
+- `baseo-image-prompts.md` — for building the `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` block that accompanies every `[SCREENSHOT: ...]` placeholder (categories, templates, ICP guardrails).
 
-If any of these reference files is missing, STOP and flag — drafting requires all four.
+If any of these reference files is missing, STOP and flag — drafting requires all five.
 
 ---
 
@@ -33,7 +34,7 @@ A complete article draft in markdown, ready for `baseo-self-check`:
 - BASEO service descriptions at the WHAT/WHY/that-we-do-it level (never proprietary how-detail).
 - BASEO contextual mentions (1–3 for Tangential briefs).
 - Featured snippet element built exactly per outline.
-- Image placeholders with descriptive captions; lists and tables per plan.
+- Image placeholders: each is a `[SCREENSHOT: ...]` block + a `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` block (per `baseo-image-prompts`) + an italic caption; lists and tables per plan.
 - Final thoughts closing (100–200 words) + audit CTA (verified URL).
 - A "Draft notes" appendix (separated by `---`) with: word count, placeholders inserted, claims/sources table, compliance pass results, language confirmation.
 
@@ -100,7 +101,12 @@ Notice what's NOT there: no monthly link count, no outreach methodology, no vend
 
 **3g. Build the featured snippet element** (only in the designated H2): paragraph (40–60 word definition, first paragraph under the H2), list (5–8 parallel items), or table (planned headers + rows). Don't redesign — write cleanly what the outline planned.
 
-**3h. Insert visual elements**: image placeholders as `![SCREENSHOT: detailed description](placeholder)` + italic caption line. Tables and lists per outline structure.
+**3h. Insert visual elements**: for each image the outline placed, output TWO consecutive blocks per `baseo-image-prompts`:
+
+1. `[SCREENSHOT: plain-language description of what the image is, 1–2 sentences]` — context for the publisher and the placement marker.
+2. `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` — the paste-ready ChatGPT prompt. Pick the category (Google SERP / GBP-local / dashboard / hero / diagram), use that template from `baseo-image-prompts`, and fill the brackets with article-specific specifics (city, query, metric + trend, scene, concept). Apply the ICP guardrails: cash-buyer queries, invented domains (no real competitor names), dashboards show leads/CPL/deals not impressions.
+
+Then an italic caption line below (per `baseo-style-guide` § Captions). Tables and lists per outline structure.
 
 **3i. Word count per section**: outline target ±20%. Don't pad.
 

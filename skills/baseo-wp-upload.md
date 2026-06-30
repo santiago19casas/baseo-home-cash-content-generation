@@ -89,18 +89,15 @@ python3 - <<'PY'
 import markdown, pathlib, re
 src = pathlib.Path("articles-in-progress/[slug]/polished-article.md").read_text()
 # drop a trailing Draft-notes appendix if present
-parts = src.split("\n---\n")
-body_md = src
+src = src.split("\n---\n")[0]
+# NOTE: do NOT strip the [PROMPT FOR CHATGPT IMAGE GENERATION: ...] blocks — both the
+# [SCREENSHOT: ...] markers AND the prompt blocks are uploaded so they're visible in the
+# WP draft. The publisher generates each image from the prompt right there in the editor.
 # strip the first H1 (it becomes the WP title)
-lines = src.splitlines()
-title = ""
-out = []
-seen_h1 = False
-for ln in lines:
+title, out, seen_h1 = "", [], False
+for ln in src.splitlines():
     if not seen_h1 and ln.startswith("# "):
-        title = ln[2:].strip()
-        seen_h1 = True
-        continue
+        title = ln[2:].strip(); seen_h1 = True; continue
     out.append(ln)
 body_md = "\n".join(out).strip()
 html = markdown.markdown(body_md, extensions=["extra", "sane_lists", "tables"])
@@ -110,7 +107,8 @@ PY
 ```
 
 Notes:
-- Keep `[SCREENSHOT: ...]` placeholders verbatim in the HTML (they're for the human to replace in the WP editor after upload). They show up as plain bracketed text — fine for a draft.
+- **Keep BOTH image blocks in the HTML.** Each image is a `[SCREENSHOT: ...]` marker followed by a `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` block (per `baseo-image-prompts`). Both are uploaded so they're visible in the WP draft: the publisher reads the SCREENSHOT for placement, copies the prompt, generates the image in ChatGPT, and replaces both blocks with the real image right in the WP editor. Do NOT strip them.
+- They show up as plain bracketed text in the draft — that's intended, it's a working draft. They get replaced before publishing.
 - Tables, lists, bold/italic, and links must survive (the `extra`/`tables` extensions handle them).
 - Internal links that point to www.thebaseo.com stay as-is.
 
@@ -312,7 +310,7 @@ cd "/Users/ec/Desktop/baseo-home-cash-content-generation" && bash articles-in-pr
 
 ## Placeholders requiring human action after upload
 
-- 🟡 N [SCREENSHOT:] placeholders — open the draft in the WP editor and replace each with the real image.
+- 🟡 N images — each appears in the draft as a `[SCREENSHOT: ...]` marker plus a `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` block. In the WP editor: copy the prompt, generate the image in ChatGPT, then replace BOTH blocks with the real image.
 - (The BASEO pipeline no longer produces [WORKFLOW:]/[PROCESS:] placeholders. If any other [BRACKET] markers survived, list them here.)
 
 ## Before you run it (first time only)

@@ -28,7 +28,7 @@ A single `.docx` in the article folder, named after the article (e.g., `seo-vs-p
 1. **Metadata header** — editorial context table + SEO metadata table (see Stage 2).
 2. **Article title** as H1; intro; TOC (if present) with anchor links.
 3. **All body sections** with H2/H3 hierarchy, native Word tables, working hyperlinks, bold/italic preserved.
-4. **Image placeholders** as yellow-background boxes with the `[SCREENSHOT: ...]` text in monospace.
+4. **Image placeholders** as yellow-background boxes with the `[SCREENSHOT: ...]` text, each followed by a light-blue box holding its `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` block, in monospace.
 5. **Final thoughts** + **CTA** formatted as a distinct callout box.
 
 NOT produced: the Draft notes appendix (stripped), the self-check report, real screenshots.
@@ -49,6 +49,8 @@ If the brief is provided, extract: primary keyword, persona, funnel stage, brief
 - 1–3 found: apply the self-check replacement logic (comma/colon/period by context).
 - 4+ found: STOP — process gap; send back to self-check.
 En-dashes (–) in ranges are fine.
+
+**Keep both image blocks**: each image is a `[SCREENSHOT: ...]` marker + a `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` block. Keep both in the docx so the publisher can generate the image from the prompt. The `[SCREENSHOT: ...]` becomes a yellow box; the `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` becomes its own distinct box right below it (see Stage 4). Do NOT strip either.
 
 **Compliance spot-check** (defensive, since this is the last gate before publishing):
 - Any package name or BASEO price outside the approved case-study context → STOP, return to writer.
@@ -89,6 +91,8 @@ Invoke `anthropic-skills:docx` (read its SKILL.md first if not loaded). Map: H1 
 
 **Image placeholders (`[SCREENSHOT: ...]`)**: single-cell table, light yellow background (#FFF2CC), monospace text, full width. Caption (if present) as italic text below the box.
 
+**Image-generation prompts (`[PROMPT FOR CHATGPT IMAGE GENERATION: ...]`)**: single-cell table, light blue background (#DAE8FC), monospace text, full width, placed directly below its yellow `[SCREENSHOT: ...]` box. This keeps the prompt visible and easy to copy. The publisher copies it into ChatGPT, generates the image, and replaces both boxes with the real image.
+
 **CTA callout box**: single-cell table, light gray background or thick border, CTA text + hyperlink bolder/larger than body. Example:
 
 > **Get your free site audit →** ([https://www.thebaseo.com/home-cash-buyers-seo/#hero](https://www.thebaseo.com/home-cash-buyers-seo/#hero))
@@ -128,7 +132,7 @@ Upload to Google Drive. Drive opens it as a Google Doc for editing.
 ## Placeholders for human completion
 
 ### Visuals to add: N
-- `[SCREENSHOT: ...]` — section H2 "[name]"
+- `[SCREENSHOT: ...]` (+ its `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]`) — section H2 "[name]"
 
 ## CTA verified
 
@@ -138,7 +142,7 @@ Upload to Google Drive. Drive opens it as a Google Doc for editing.
 ## Next steps for the editor
 
 1. Open the .docx in Google Drive (right-click → Open with Google Docs)
-2. Replace each yellow box with the real visual (SERP screenshot, chart, report excerpt)
+2. For each yellow box: copy the prompt from the blue box below it into ChatGPT, generate the image, and replace both boxes with the real visual
 3. Final polish edit if needed
 4. Copy to the CMS and publish
 ```
@@ -148,7 +152,7 @@ Upload to Google Drive. Drive opens it as a Google Doc for editing.
 ## Hard rules
 
 - **Don't modify article content.** Finalize is format-and-package. Content issues → back to the writer.
-- **Don't fill placeholders.** Yellow `[SCREENSHOT: ...]` boxes stay verbatim for the human.
+- **Don't fill placeholders.** Yellow `[SCREENSHOT: ...]` boxes and blue `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` boxes stay verbatim for the human.
 - **Strip the Draft notes appendix.**
 - **Verify the CTA URL** against `baseo-context` § Canonical URLs. Unverified → STOP.
 - **Run the compliance spot-check** (prices, packages, guarantees) — any hit STOPs the finalize.

@@ -23,7 +23,7 @@ Trigger phrases: "self-check this draft," "pre-review compliance check," "polish
 
 Two outputs separated by `---`:
 
-1. **Polished draft**: article body with safe auto-fixes applied (banned phrases replaced, agency-speak translated, marketing-verb H2s rewritten, price disclosures removed, em-dashes replaced). `[SCREENSHOT: ...]` placeholders stay untouched.
+1. **Polished draft**: article body with safe auto-fixes applied (banned phrases replaced, agency-speak translated, marketing-verb H2s rewritten, price disclosures removed, em-dashes replaced). `[SCREENSHOT: ...]` placeholders and their `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` blocks stay untouched.
 2. **Self-check report**: structured fix log + flags, with verdict (✅ Ready for review | ⚠️ Needs writer attention before review).
 
 ---
@@ -65,7 +65,7 @@ Separate article body from Draft notes appendix if present. Use Draft notes for 
 | 15 | External link count | Tier 1/2 citations | ❌ Flag only |
 | 16 | Data points without source | Numbers lacking source AND not in Approved library | ❌ Flag only — never fabricate sources |
 | 17 | Image/list/table minimums | Count vs style-guide minimums | ❌ Flag only |
-| 18 | `[SCREENSHOT: ...]` placeholders | Count | ⚠️ Inventory for human |
+| 18 | `[SCREENSHOT: ...]` placeholders + image prompts | Count `[SCREENSHOT: ...]` markers; verify each is immediately followed by a `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` block (per `baseo-image-prompts`) | ⚠️ Inventory for human; ❌ flag any `[SCREENSHOT:]` missing its prompt block |
 | 19 | Proprietary how-detail leak | Already covered by check 7c (named tool/vendor, per-month counts, internal workflow) | ❌ Flag only — recommend trim/reframe |
 | 20 | Featured snippet element present | Detect 40–60 word definition near top / 5–8 item list / comparison table | ❌ Flag only |
 | 21 | TOC (if > 1,500 words) | Bulleted H2 anchor list above first H2 | ❌ Flag only |
@@ -191,8 +191,8 @@ For each check: ✅ pass / ⚠️ fixed (original → replacement, location) / �
 
 ## Placeholders inventory (for human completion before publish)
 
-### Screenshot placeholders
-- `[SCREENSHOT: ...]` — section: H2 "[name]" — what to capture: [description]
+### Screenshot placeholders (each should have a matching image prompt)
+- `[SCREENSHOT: ...]` — section: H2 "[name]" — what to capture: [description] — image prompt present: ✅ / ❌
 ```
 
 ---
@@ -202,7 +202,7 @@ For each check: ✅ pass / ⚠️ fixed (original → replacement, location) / �
 - **Don't make judgment calls.** Mechanical only. Interpretation needed → flag.
 - **Auto-fix only when meaning is preserved.**
 - **Don't invent content.** Never add sources, links, claims, or text.
-- **Don't remove `[SCREENSHOT: ...]` placeholders.** They're intentional, for the human to fill before publish.
+- **Don't remove `[SCREENSHOT: ...]` placeholders or their `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` blocks.** Both stay in the article all the way into the WordPress draft, where the publisher generates each image from the prompt and replaces both blocks with the real image.
 - **Don't change article structure.**
 - **Never "fix" a claim by adjusting the number.** Claim fidelity issues are flags for the writer, not edits.
 - **Verify, don't trust the Draft notes.**

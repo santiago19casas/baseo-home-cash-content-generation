@@ -13,7 +13,7 @@ Trigger phrases: "create this article," "run the pipeline," "generate the full d
 ## What this skill expects loaded
 
 - **All 5 sub-skills**: `baseo-brief-enrich`, `baseo-research`, `baseo-outline`, `baseo-draft`, `baseo-self-check` — loadable in the same session.
-- **All reference files**: `baseo-context`, `baseo-style-guide`, `baseo-services-reference.md`, `baseo-corpus.csv`.
+- **All reference files**: `baseo-context`, `baseo-style-guide`, `baseo-services-reference.md`, `baseo-image-prompts.md`, `baseo-corpus.csv`.
 - **WebSearch / web_fetch** for the research stage.
 
 If any required tool or file is missing, STOP at the earliest stage that needs it and report the missing dependency.

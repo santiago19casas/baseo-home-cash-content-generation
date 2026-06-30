@@ -63,6 +63,7 @@ APROBADO → baseo-finalize
 | `baseo-context.md` | Single source of truth: personas B1–B5, anti-personas (¡sellers!), catálogo de servicios + out-of-scope, Approved claims library, pricing disclosure policy, pain → service map, Tangential rules, funnel stages, banned clichés + agency-speak + trust-killers, URLs canónicas, ICP vocabulary |
 | `baseo-style-guide.md` | Voz operator-to-operator, deal-math sentences, translation gap (investor language), intros, H2/H3 rules, service integration (regla "name it, prove the why, skip the how"), internal linking, visual cadence, closes |
 | `baseo-services-reference.md` | Cheat sheet de delivery por servicio: qué es SEGURO afirmar (WHAT/WHY) y qué se OMITE por política (tools, conteos, workflow). Equivalente del ui-reference de Schemafy. |
+| `baseo-image-prompts.md` | Reglas + templates para generar prompts de ChatGPT por cada imagen. Categorías: Google SERP, GBP/local, dashboard de leads, hero fotográfico, diagrama. SIN categoría de producto-UI (BASEO no tiene producto). El drafter lo lee; el publisher genera la imagen del prompt. |
 
 **Phase 2 — Review:**
 
@@ -78,7 +79,7 @@ APROBADO → baseo-finalize
 | `baseo-brief-enrich.md` | Cluster + headings → brief enriquecido con persona, funnel, pain→service, CTA (audit), snippet target, SEO metadata, density targets, framing Active/Tangential. Gate de audiencia (sellers → STOP) |
 | `baseo-research.md` | Brief → dossier con SERP analysis, fuentes tier-clasificadas (Google/Carrot/ATTOM...), claims first-party desde la library + stats externos con source verificada, internal link candidates, capability hooks. WebSearch + web_fetch (3–6 calls) |
 | `baseo-outline.md` | Brief + dossier → outline paragraph-level con data placement, link placement, snippet structure, word counts, compliance preflight |
-| `baseo-draft.md` | Outline → prose. Aplica style guide. Describe servicios a nivel QUÉ/POR QUÉ (nunca el cómo propietario). Inserta `[SCREENSHOT: ...]` |
+| `baseo-draft.md` | Outline → prose. Aplica style guide. Describe servicios a nivel QUÉ/POR QUÉ (nunca el cómo propietario). Por cada imagen inserta `[SCREENSHOT: ...]` + `[PROMPT FOR CHATGPT IMAGE GENERATION: ...]` (vía `baseo-image-prompts`) |
 | `baseo-self-check.md` | Draft → auto-fix de clichés/agency-speak/price disclosures/em-dashes + flags (claims, garantías, fabricación, audiencia). Verdict: Ready for review / Needs writer attention |
 | `baseo-create-article.md` | **Orquestador**. Corre las 5 en secuencia, guarda outputs por artículo, honora STOPs, soporta resume |
 
@@ -86,7 +87,8 @@ APROBADO → baseo-finalize
 
 | Skill | Función |
 |---|---|
-| `baseo-finalize.md` | Polished article aprobado → `.docx` con metadata header, cajas amarillas (screenshots), CTA box. Spot-check final de compliance |
+| `baseo-finalize.md` | Polished article aprobado → `.docx` con metadata header, cajas amarillas (SCREENSHOT) + cajas azules (PROMPT), CTA box. Spot-check final de compliance |
+| `baseo-wp-upload.md` | (Vía headless) Polished article aprobado → payload JSON + runner bash para crear el draft en WordPress vía REST. Sube HTML (con SCREENSHOT + PROMPT visibles) + ACF meta. Flujo de 2 fases. |
 
 **El archivo que tu equipo mantiene además de las referencias:**
 
