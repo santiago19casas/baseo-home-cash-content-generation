@@ -206,7 +206,7 @@ For each check: ✅ pass / ⚠️ fixed (original → replacement, location) / �
 - **Don't change article structure.**
 - **Never "fix" a claim by adjusting the number.** Claim fidelity issues are flags for the writer, not edits.
 - **Verify, don't trust the Draft notes.**
-- **Polished article stays in the original language.** The report is in English by default.
+- **Polished article stays in the original language (English), and so do all auto-fixes** — they're edits to the English article body. **The self-check report is written in Spanish** (the writer/reviewer reads Spanish). Quotes of flagged text stay verbatim (English).
 
 ---
 

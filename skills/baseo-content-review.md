@@ -200,7 +200,7 @@ Pick one score. No fractions, no hedging.
 
 ## Output format
 
-Return in exactly this structure. Output in English; quote the article verbatim in its source language.
+Return in exactly this structure. **Write the report in Spanish** (the reviewer reads Spanish). Two things stay in their original language: (1) quotes from the article, verbatim (English); (2) any suggested replacement copy that would be inserted into the article — meta titles, meta descriptions, CTA text, anchor text — must be in the article's language (English), since it goes into an English article. Section headers below may stay as-is or be translated; the analysis prose is Spanish.
 
 ```
 ## BASEO Content Review
@@ -275,7 +275,7 @@ Return in exactly this structure. Output in English; quote the article verbatim 
 ## Hard rules for the review itself
 
 - **Quote the article.** Never characterize without a quote.
-- **Always output in English**; quotes verbatim in source language.
+- **Write the report in Spanish.** Exceptions that stay in the article's language (English): verbatim quotes, and any suggested replacement copy meant to be inserted into the article (meta title/description, CTA, anchor text).
 - **No hedging. Pick one verdict.**
 - **Don't inflate scores.** A 1 or 2 is valid.
 - **Don't use buzzwords or agency-speak in the review.** Practice what the ICP demands.

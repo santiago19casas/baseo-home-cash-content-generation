@@ -182,7 +182,7 @@ Skipped stages are marked `⏭ skipped (provided)`.
 - **Don't modify sub-skill outputs.** Pass as-is between stages.
 - **Don't add commentary between stages.** The status table covers progress.
 - **Don't override sub-skill logic.** Brief says Tangential → everything downstream gets Tangential.
-- **Match the input language** for sub-skill outputs; the orchestrator's report is English by default.
+- **Match the input language** for the article-producing sub-skill outputs (the article stays in its language, English by default). **The orchestrator's own chat report (pipeline status, verdict, top flags, next steps) is written in Spanish** — it's operator-facing feedback, like the review reports. File paths, skill names, and verbatim quotes stay as-is.
 - **Don't attempt automatic resumption after a STOP.** Writer fixes and re-invokes.
 
 ---

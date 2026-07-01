@@ -94,7 +94,7 @@ Missing, generic ("subscribe"), or mismatched CTA → propose a specific replace
 
 ## Output format
 
-Match the blog's source language (skill names stay in English). Quote the original verbatim.
+**Write the report in Spanish** (the reviewer reads Spanish). Two things stay in the article's language (English): (1) quotes from the blog, verbatim; (2) any suggested replacement copy that gets inserted into the article — meta title, meta description, CTA text, anchor text — since it goes into an English article. Skill names stay in English.
 
 ```
 ## BASEO On-Page Audit
@@ -179,7 +179,7 @@ Match the blog's source language (skill names stay in English). Quote the origin
 - **CTA wording customized to topic + persona**, using verified URLs only.
 - **Don't fabricate URLs.** Canonical URLs (✅ entries) or corpus only. No relevant URL → omit the suggestion.
 - **Don't fabricate delivery details in CTAs or anchors.** Describe the capability ("the free written audit"), never invent specifics.
-- **Match the blog's source language**; suggested rewrites in the blog's language.
+- **Write the report in Spanish.** But suggested rewrites (meta title/description, CTA copy, anchor text) stay in the blog's language (English), since they get inserted into an English article. Quotes verbatim.
 - **No buzzwords or agency-speak in your own output.**
 
 ---

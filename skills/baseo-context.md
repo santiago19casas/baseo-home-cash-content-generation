@@ -415,8 +415,9 @@ motivated sellers, deal flow, cost per lead (CPL), cost per deal, assignment fee
 ## Language and output rules
 
 - **Article output language**: English by default (the audience is US/Canada investors). If a brief explicitly specifies Spanish, match it.
-- **Skill evaluation output**: English by default, unless a specific skill overrides this rule.
-- **Direct quoting**: when a skill quotes the article (in review reports), preserve the original language verbatim.
+- **Evaluation / feedback reports language**: **Spanish.** The reports operators read — `baseo-content-review`, `baseo-onpage-audit`, `baseo-self-check`, and the `baseo-create-article` orchestrator report — are written in Spanish (the team reads Spanish). This is operator-facing feedback, separate from the article.
+- **Two exceptions that stay in the article's language (English)** inside those reports: (1) verbatim quotes from the article; (2) any suggested replacement copy meant to be inserted into the article (meta title/description, CTA text, anchor text). A suggested English meta description written in Spanish would be useless for an English article.
+- **Self-check auto-fixes** edit the English article body, so they stay English; only the self-check *report* is Spanish.
 
 ---
 
