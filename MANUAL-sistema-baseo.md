@@ -177,7 +177,7 @@ Como las skills NO están instaladas (ver sección 3), el prompt debe pedirle a 
 
 ```
 Estás corriendo el pipeline editorial de BASEO. Los skills son archivos en esta
-working folder (NO están instalados; el repo es la fuente de verdad).
+working folder 
 
 Paso 1 — Lee y sigue al pie de la letra, en este orden:
 - skills/baseo-context.md
