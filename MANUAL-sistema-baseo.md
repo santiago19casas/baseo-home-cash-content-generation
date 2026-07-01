@@ -147,9 +147,13 @@ baseo-home-cash-content-generation/
 
 `baseo-research` usa WebSearch + web_fetch. El keyword research se asume hecho upstream en tu calendario editorial (ahí sí puedes usar tu Ahrefs MCP si quieres, pero fuera del pipeline).
 
-### Skills "instaladas" en Cowork
+### Las skills NO se instalan en Cowork (decisión de diseño)
 
-Los `.md` de `skills/` se empaquetan como Cowork skills (frontmatter YAML `name` + `description`) para invocarlas por nombre. Es deployment, se hace una vez. Mientras tanto, adjuntar los archivos en el chat funciona igual.
+Las skills se corren **como archivos del repo**, no instaladas como Cowork skills. El repo de GitHub es la única fuente de verdad: seguimos corrigiéndolas y versionándolas, e instalarlas congelaría una copia que se divorcia del repo. Por eso NO tienen frontmatter YAML ni se registran en Settings → Capabilities.
+
+**Consecuencia práctica**: escribir "Corre baseo-create-article" a secas NO activa nada — Cowork no reconoce ese nombre porque no hay skill instalada. Hay que decirle a Claude que **LEA los archivos primero**. Ese es el prompt del Paso 3.
+
+Antes de correr, haz `git pull` para usar la última versión de las skills.
 
 ---
 
@@ -163,30 +167,49 @@ Topic + cluster de 2–5 keywords + opcionalmente angle context ("target B1", "l
 
 Abrir top 10 del SERP del primary keyword, extraer headings, construir la tabla H1/H2/H3 + guideline por sección. Igual que en Schemafy, este paso vive fuera del pipeline.
 
-### Paso 2 — Chat nuevo (Escritor)
+### Paso 2 — Chat nuevo + `git pull` (Escritor)
 
-Un artículo = un chat. Tener disponibles: las 3 referencias + `baseo-corpus.csv` + las 6 skills de creación (o instaladas como Cowork skills).
+Un artículo = un chat. Antes de nada, `git pull` para tener la última versión de las skills.
 
-### Paso 3 — Invocar el orquestador
+### Paso 3 — Invocar el orquestador (prompt que LEE los archivos)
+
+Como las skills NO están instaladas (ver sección 3), el prompt debe pedirle a Claude que lea los archivos primero. Este es el prompt reutilizable — solo cambia los inputs de abajo:
 
 ```
-Corre baseo-create-article con estos inputs:
+Estás corriendo el pipeline editorial de BASEO. Los skills son archivos en esta
+working folder (NO están instalados; el repo es la fuente de verdad).
 
-Topic: How to vet an SEO agency after you've been burned
-Primary keyword: seo agency for real estate investors
-Cluster: seo agency for real estate investors, seo for we buy houses,
-         real estate investor seo company
+Paso 1 — Lee y sigue al pie de la letra, en este orden:
+- skills/baseo-context.md
+- skills/baseo-style-guide.md
+- skills/baseo-services-reference.md
+- skills/baseo-image-prompts.md
+- baseo-corpus.csv
+- skills/baseo-create-article.md   ← orquestador
+Y las 5 sub-skills que el orquestador invoca:
+- skills/baseo-brief-enrich.md
+- skills/baseo-research.md
+- skills/baseo-outline.md
+- skills/baseo-draft.md
+- skills/baseo-self-check.md
 
+Paso 2 — Ejecuta el pipeline baseo-create-article con estos inputs:
+
+Topic: [tu topic]
+Primary keyword: [tu primary keyword]
+Cluster: [2–5 keywords que compartan intención con el topic]
 Heading structure:
-| Heading | Level | Guideline |
-|---|---|---|
-| ... | ... | ... |
+[pega la tabla H1/H2/H3 + guidelines completa aquí]
 
-Angle context: target B1, lean on the deliverables-guarantee mechanics
+Angle context: [opcional — ej. "target B1", "lead with deal math"]
 Language: English
 ```
 
 El orquestador ejecuta los 5 stages, guarda los 6 archivos y responde con pipeline status + verdict + top 3 flags + links.
+
+**Atajo más corto** (menos a prueba de fallos): *"Lee skills/baseo-create-article.md y síguelo, cargando TODOS los archivos que su sección 'What this skill expects loaded' pida antes de ejecutar."* El orquestador declara sus dependencias, así que Claude puede resolverlas solo — pero listar los archivos explícitamente falla menos.
+
+**Para review y finalize**: mismo patrón. Ej. review → "Lee skills/baseo-context.md, skills/baseo-style-guide.md, skills/baseo-content-review.md, skills/baseo-onpage-audit.md y baseo-corpus.csv, luego corre content-review y on-page-audit sobre articles-in-progress/[slug]/polished-article.md".
 
 ### Paso 4 — Resolver flags (Escritor)
 
@@ -311,7 +334,9 @@ Tiempo estimado por vertical una vez dominado el patrón: el grueso es escribir 
 
 ## 9. Resumen de invocación rápida
 
-| Quiero... | Skill | Cómo invocar |
+**Recordatorio**: las skills NO están instaladas (sección 3). En cada corrida, el prompt debe pedirle a Claude que **lea primero los archivos** de las skills relevantes (ver el prompt del Paso 3). La columna "Cómo invocar" abajo es la instrucción resumida — precédela siempre con "Lee skills/[archivos relevantes] y luego...".
+
+| Quiero... | Skill | Cómo invocar (tras leer los archivos) |
 |---|---|---|
 | Crear un artículo end-to-end | `baseo-create-article` | "Corre baseo-create-article con: topic [...], cluster [...], heading structure [...]" |
 | Solo el outline desde un brief | `baseo-outline` | "Corre baseo-outline con este brief y dossier" |
