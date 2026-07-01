@@ -43,6 +43,7 @@ Nunca intentar el POST desde Cowork.
 ```
 
 - **Status siempre `draft`.** Publicar es manual en WP.
+- **Categorías siempre `[4, 1]`** = Cash Buyers (ID 4) + Resources (ID 1). Cada artículo sube con ambas. WP asigna categorías por ID, no por nombre. Si algún día cambian los IDs, actualizar en `baseo-wp-upload`. (Otras categorías existentes: Case Studies = 6, Law Firm = 7.)
 - El **meta SEO va en ACF** (`meta_title`, `meta_description`) bajo el `acf` key. Esto es lo que Astro lee en producción — el meta nativo de WP NO se usa. ✅ Confirmado que el `acf` write funciona vía REST (field group "SEO MetaData" en Posts, con "Show in REST" activo).
 - El **schema (JSON-LD) lo genera Astro** en render time. La skill no manda schema.
 - El H1 del markdown → campo `title` de WP (no va dentro de `content`).
