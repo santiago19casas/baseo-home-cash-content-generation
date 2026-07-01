@@ -3,3 +3,4 @@
 
 # Local secrets — never commit
 .env
+.env
