@@ -195,18 +195,39 @@ This is the agency-world equivalent of a feature catalog: **what results the wri
 
 ### External stat candidates (pre-cleared topics — research must attach the source)
 
-- ChatGPT visitors convert at 15.9% vs 1.76% for Google organic (9x) — AI search conversion.
-- One Carrot user received 26 of 45 weekly leads from ChatGPT — AI search volume anecdote (Carrot).
-- AI referral traffic grew 527% YoY; LLMs cite 2–7 domains per answer; only 16% of brands measure AI search.
-- "Sell my house fast" CPC rose ~36% from 2023 to 2024; clicks run $25–$120 by market.
-- Google's March 2024 update cut ~45% of low-quality content and introduced the Scaled Content Abuse policy (hits template/duplicate city pages).
-- 30%+ of top-ranking "we buy houses" sites use near-identical Carrot template content.
-- SEO vs PPC for REI: cost per lead $15–$30 (mature organic) vs $50–$300 (paid); cost per deal $500–$2,000 vs $2,500–$7,500; SEO ROAS ~15.1x vs PPC ~1.4x; real estate SEO ROI ~1,389%.
-- Programmatic scale: 19,500+ incorporated US cities, 3,144 counties, 41,552 ZIP codes.
-- Deal economics: wholesale assignment fee national average $10,000–$13,000; median flip gross profit $65,981 (2025).
-- Conversion/follow-up: multi-step forms convert 86% better; responding within 5 minutes converts up to 900% more; 93.7% of investors don't follow up properly; ~80% of motivated-seller transactions happen after the 5th contact; visitor-to-lead rates of 7–20% on optimized investor sites.
+⚠️ **A pre-cleared topic is NOT a pre-cleared number.** Every stat below still requires `baseo-research` to attach a live source URL before it can be published. Stats are grouped by verification status. **Last verification pass: July 2026** (during the `search-engine-optimization-services-for-real-estate` brief).
 
-If `baseo-research` cannot find a credible source for an external stat, the draft must drop the stat — never publish it sourceless.
+#### ✅ Verified — source located, safe to cite with the URL attached
+
+- ChatGPT visitors convert at 15.9% vs 1.76% for Google organic — [Seer Interactive](https://www.seerinteractive.com/insights/case-study-6-learnings-about-how-traffic-from-chatgpt-converts). **Caveat is mandatory in the copy**: the study tracked a single B2B software client (1,370 AI conversions vs ~14M organic sessions). Cite as directional, never as a benchmark a cash buyer should expect. Stripping the caveat turns a sourced claim into an inflated one.
+- One Carrot user received 26 of 45 weekly leads from ChatGPT — [Carrot](https://carrot.com/blog/how-ai-is-reshaping-seo-for-real-estate-investors-2/).
+- 30%+ of top-ranking "we buy houses" sites use near-identical Carrot template content — [Carrot](https://carrot.com/blog/how-ai-is-reshaping-seo-for-real-estate-investors-2/).
+- AI Overviews appear on nearly half of all searches; Google launched AI Mode to all US searchers in May 2025 — [Carrot](https://carrot.com/blog/how-ai-is-reshaping-seo-for-real-estate-investors-2/).
+- Google's March 2024 core update introduced the **Scaled Content Abuse** policy: "many pages generated for the primary purpose of manipulating Search rankings and not helping users," targeting "large amounts of unoriginal content," and it applies "no matter how it's created" — [Google Search Central](https://developers.google.com/search/blog/2024/03/core-update-spam-policies). (Hits template/duplicate city pages. The "cut ~45% of low-quality content" figure is Google's *stated goal*, not a measured outcome. Prefer the policy language.)
+- **Median flip economics (Q3 2025)**: bought at a $260,000 national median, sold at $320,000, for **$60,000 gross profit**, at a **23.1% ROI, the lowest since 2008** — [ATTOM](https://www.attomdata.com/news/market-trends/flipping/q3-2025-home-flipping-report/).
+- **Wholesale assignment fee**: national average ≈ **$13,000**; range roughly $3,000–$25,000 by market (highest NC/GA ≈ $22,000; lowest AZ ≈ $5,000) — [Real Estate Bees](https://realestatebees.com/statistics/average-wholesale-assignment-fee/).
+- **Investor PPC economics**: "we buy houses cash" / "sell my house as-is" run ≈ **$2.50–$5.00 CPC**; investor campaigns convert 7–10% for a CPL of ≈ **$28–$65** — [Promodo](https://www.promodo.com/blog/the-ultimate-ppc-guide-for-real-estate-investors). Contested terms like "sell house fast" run roughly **$12–$63/click** by market — [Webrageous](https://webrageous.com/blog/google-ads-for-real-estate-investors.htm).
+- **SEO vs PPC in real estate**: organic leads cost **83% less** than PPC leads (largest gap of any industry studied); Carrot's Investor Performance Study found organic leads close **2× more profitably** than PPC leads; content CPL starts ≈ $80–$100 and falls to **$7–$30** once content has authority; real estate SEO ROI by year three ≈ **1,389%** — [Visionary Marketing](https://visionary-marketing.co.uk/blog/seo-vs-ppc-data-comparison-2026).
+- **Industry SEO retainers** (describes the market, NOT BASEO's price list, so it is publishable): most common tier **$1,500–$5,000/month** (≈48% of agencies); Ahrefs survey of 439 SEO pros: **$3,209/month** average; Clutch: ≈ $3,199 — [GoodFirms](https://www.goodfirms.co/resources/seo-pricing-plans).
+
+#### ❌ RETRACTED — failed verification, do NOT publish
+
+These were previously listed here as pre-cleared and **did not survive a source check**. They must not appear in any draft. Verified replacements are listed above.
+
+| Retracted claim | Why | Use instead |
+|---|---|---|
+| "Median flip gross profit **$65,981** (2025)" | **Contradicts the primary source.** ATTOM's own Q3 2025 report publishes **$60,000**. Publishing $65,981 against ATTOM's number is exactly the error a skeptical B1 checks. | ATTOM: $60,000 gross profit, 23.1% ROI |
+| "'Sell my house fast' clicks run **$25–$120** by market" | No source located. Real sourced figures are far lower. | Promodo ($2.50–$5.00) and Webrageous ($12–$63) |
+| "'Sell my house fast' CPC rose **~36%** from 2023 to 2024" | No source located. | Drop the precise figure. Make the rising-cost argument qualitatively, or not at all. |
+| "Cost per lead $15–$30 vs $50–$300; cost per deal **$500–$2,000 vs $2,500–$7,500**; SEO **ROAS ~15.1x** vs PPC ~1.4x" | Not verifiable as stated. Also note **"ROAS" is banned agency-speak** (§ Banned clichés) — the frame is cost per deal. | Visionary Marketing (83% cheaper, 2× more profitable, $7–$30 mature CPL) + Promodo ($28–$65 investor CPL) |
+| "AI referral traffic grew **527% YoY**; LLMs cite **2–7 domains** per answer; only **16%** of brands measure AI search" | Not verified. | The Carrot and Seer numbers carry the AEO argument on their own. |
+| "Multi-step forms convert **86% better**; responding within 5 minutes converts up to **900%** more; **93.7%** of investors don't follow up properly; ~80% of transactions happen after the 5th contact; visitor-to-lead rates of **7–20%**" | Not verified. | Do not use until sourced. If a brief needs the speed-to-lead argument, `baseo-research` must source it fresh. |
+
+#### Unverified — usable only if research locates a source
+
+- Programmatic scale: 19,500+ incorporated US cities, 3,144 counties, 41,552 ZIP codes. (Plausible and checkable against Census data, but no pass has confirmed it yet.)
+
+If `baseo-research` cannot find a credible source for an external stat, the draft must drop the stat — never publish it sourceless. **A number in the ❌ RETRACTED table is not a candidate; it is a known error.**
 
 ---
 
